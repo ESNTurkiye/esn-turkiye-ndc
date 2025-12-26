@@ -25,11 +25,13 @@ const Hero = () => {
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center font-display">
-                    <button className="px-8 py-4 bg-esn-cyan text-white rounded-lg font-bold tracking-wide hover:bg-blue-700 transition shadow-lg shadow-esn-cyan/20 uppercase">
-                        Share Your Story
+                    <button className="relative px-8 py-4 rounded-lg font-bold tracking-wide shadow-lg shadow-esn-cyan/20 uppercase overflow-hidden group bg-esn-light-blue">
+                        <span className="absolute inset-0 bg-esn-cyan origin-center scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out"></span>
+                        <span className="relative z-10 text-white">Share Your Story</span>
                     </button>
-                    <button className="px-8 py-4 bg-transparent text-white border-2 border-white rounded-lg font-bold tracking-wide hover:bg-white hover:text-esn-dark-blue transition uppercase">
-                        Read 2025 Report
+                    <button className="relative px-8 py-4 bg-transparent text-white border-2 border-white rounded-lg font-bold tracking-wide uppercase overflow-hidden group">
+                        <span className="absolute inset-0 bg-white origin-center scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out"></span>
+                        <span className="relative z-10 group-hover:text-esn-dark-blue transition-colors duration-300">Read 2025 Report</span>
                     </button>
                 </div>
             </div>

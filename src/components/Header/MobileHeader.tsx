@@ -20,13 +20,25 @@ const MobileHeader = ({ navigationLinks, scrollToSection }: MobileHeaderProps) =
     return (
         <header className="fixed w-full bg-esn-dark-blue shadow-sm z-50 border-b border-esn-dark-blue/20 md:hidden">
             <div className="container mx-auto px-4 py-2 flex justify-between items-center">
-                <div className="flex items-center gap-2">
+                <a 
+                    href="#" 
+                    onClick={(e) => {
+                        e.preventDefault();
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }}
+                    className="flex items-center gap-2 hover:opacity-90 transition-opacity"
+                >
                     <img 
                         src="/assets/images/logos/web-TR-colour-white.png" 
                         alt="ESN Türkiye Logo" 
                         className="h-14 w-auto object-contain"
                     />
-                </div>
+                    <div className="flex flex-col leading-tight">
+                        <span className="text-white font-display font-bold tracking-wide text-xs">BARRIERS OF</span>
+                        <span className="text-white font-display font-bold tracking-wide text-xs">MOBILITY</span>
+                        <span className="text-white/80 font-body text-[9px] font-normal tracking-normal mt-0.5">Research Project by ESN</span>
+                    </div>
+                </a>
 
                 <button 
                     className="text-white p-1"
@@ -45,7 +57,6 @@ const MobileHeader = ({ navigationLinks, scrollToSection }: MobileHeaderProps) =
                 </button>
             </div>
 
-            {/* Mobile Dropdown Menu */}
             <div 
                 className={`absolute top-full left-0 w-full bg-white shadow-lg border-b border-gray-100 transition-all duration-300 ease-in-out ${
                     isMenuOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0 overflow-hidden"
