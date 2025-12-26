@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+/* Kelson Sans Font Face - Eğer font dosyaları public/fonts klasöründe ise */
+@font-face {
+    font-family: 'Kelson Sans';
+    src: url('/fonts/KelsonSans-Normal.woff2') format('woff2'),
+         url('/fonts/KelsonSans-Normal.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Kelson Sans';
+    src: url('/fonts/KelsonSans-Bold.woff2') format('woff2'),
+         url('/fonts/KelsonSans-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Kelson Sans';
+    src: url('/fonts/KelsonSans-Light.woff2') format('woff2'),
+         url('/fonts/KelsonSans-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@theme {
+    /* ESN Renkleri - VIM Sayfa 9 */
+    --color-esn-cyan: #00aeef;
+    --color-esn-magenta: #ec008c;
+    --color-esn-green: #7ac143;
+    --color-esn-orange: #f47b20;
+    --color-esn-dark-blue: #2e3192;
+    --color-esn-light-blue: #33b5e5;
+    --color-esn-light-green: #a0d33e;
+    --color-esn-light-orange: #ff9900;
+    --color-esn-light-purple: #9933cc;
+    --color-esn-light-red: #ff4444;
+    --color-esn-light-yellow: #ffff44;
+    --color-esn-light-gray: #888888;
+    --color-esn-light-black: #000000;
+    --color-esn-light-white: #ffffff;
+    --color-esn-light-gray: #888888;
+    --color-esn-light-black: #000000;
+    --color-esn-light-white: #ffffff;
+    --color-esn-light-gray: #888888;
+    --color-esn-light-black: #000000;
+    --color-esn-light-white: #ffffff;
+
+    /* ESN Fontları - VIM Sayfa 10 */
+    --font-display: "Kelson Sans", "Lato", sans-serif;
+    --font-body: "Kelson Sans", "Lato", sans-serif;
+}
+
+* {
+    font-family: "Kelson Sans", "Lato", sans-serif;
+}
+
+body {
+    font-family: "Kelson Sans", "Lato", sans-serif;
+    color: #1e1e1e;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Kelson Sans", "Lato", sans-serif;
+    text-transform: uppercase;
+}
