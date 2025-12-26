@@ -2,22 +2,22 @@ const teamMembers = [
     {
       name: "Efe Berke",
       role: "NB Responsible",
-      image: null
+      image: "/image/team/efe-berke.png"
     },
     {
       name: "Sedanur",
       role: "Main Chair",
-      image: null
+      image: "/image/team/sedanur.png"
     },
     {
       name: "Deniz Gülse",
       role: "Vice Chair of Int. Helpline",
-      image: null
+      image: "/image/team/deniz-gulse.png"
     },
     {
       name: "Yusuf",
       role: "Vice Chair of Strategy Team",
-      image: null
+      image: "/image/team/yusuf.png"
     }
   ];
   
@@ -35,7 +35,7 @@ const teamMembers = [
             </p>
           </div>
   
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8" role="list">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8" role="list">
             {teamMembers.map((member, index) => (
               <article key={index} className="flex flex-col items-center text-center group">
                 <div className="w-32 h-32 mb-6 rounded-full bg-gray-200 border-4 border-white shadow-lg shadow-esn-dark-blue/15 flex items-center justify-center overflow-hidden group-hover:border-esn-cyan group-hover:shadow-xl group-hover:shadow-esn-cyan/25 transition-all duration-300" aria-hidden="true">
