@@ -1,6 +1,9 @@
 import MobileHeader from "./MobileHeader";
 import DesktopHeader from "./DesktopHeader";
 
+// Survey link - will be updated to https://www.limesurvey.org later
+export const SURVEY_URL = "https://esnturkey.org/";
+
 export interface NavigationLink {
     label: string;
     sectionId: string;
@@ -11,6 +14,10 @@ const Header = () => {
     const scrollToSection = (sectionId: string) => {
         if (sectionId === 'top' || sectionId === 'home') {
             window.scrollTo({ top: 0, behavior: 'smooth' });
+            return;
+        }
+        if (sectionId === 'survey') {
+            window.open(SURVEY_URL, '_blank', 'noopener,noreferrer');
             return;
         }
         const element = document.getElementById(sectionId);

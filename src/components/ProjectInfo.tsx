@@ -16,7 +16,7 @@ const ProjectInfo = () => {
                   </div>
   
                   <div id="report-2025">
-                      <div className="bg-white shadow-lg p-6 sm:p-8 md:p-10 relative overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                      <div className="bg-white shadow-lg shadow-esn-dark-blue/10 p-6 sm:p-8 md:p-10 relative overflow-hidden hover:shadow-xl hover:shadow-esn-dark-blue/20 transition-shadow duration-300">
                           <div className="absolute top-0 right-0 w-48 h-48 bg-esn-dark-blue/5 rounded-full blur-3xl -z-10"></div>
                           
                           <div className="relative z-10">
@@ -28,7 +28,7 @@ const ProjectInfo = () => {
                                       The previous edition of Barriers of Mobility achieved significant milestones in understanding visa challenges faced by the Erasmus Generation.
                                   </p>
                                   
-                                  <article className="bg-gray-50 rounded-lg p-4 sm:p-5">
+                                  <article className="bg-gray-50 rounded-lg p-4 sm:p-5 shadow-sm shadow-gray-200/50">
                                       <h3 className="font-display font-bold text-gray-900 mb-3 text-sm sm:text-base uppercase">Key Achievements</h3>
                                       <ul className="space-y-2 text-gray-700 text-sm sm:text-base" role="list">
                                           <li className="flex items-start gap-2">
@@ -49,7 +49,7 @@ const ProjectInfo = () => {
                               
                               <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
                                   <button 
-                                      className="px-6 sm:px-8 py-3 bg-esn-dark-blue text-white font-bold font-display rounded-lg hover:bg-blue-900 transition uppercase flex items-center justify-center gap-2 text-sm sm:text-base"
+                                      className="px-6 sm:px-8 py-3 bg-esn-dark-blue text-white font-bold font-display rounded-lg hover:bg-blue-900 transition shadow-md shadow-esn-dark-blue/25 hover:shadow-lg hover:shadow-esn-dark-blue/35 uppercase flex items-center justify-center gap-2 text-sm sm:text-base"
                                       aria-label="Download the 2025 Barriers of Mobility policy paper"
                                   >
                                       <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
@@ -57,7 +57,7 @@ const ProjectInfo = () => {
                                   </button>
                                   <a 
                                       href="#" 
-                                      className="px-6 sm:px-8 py-3 bg-white text-esn-dark-blue font-bold font-display rounded-lg hover:bg-gray-50 transition uppercase flex items-center justify-center gap-2 text-sm sm:text-base border-2 border-esn-dark-blue"
+                                      className="px-6 sm:px-8 py-3 bg-white text-esn-dark-blue font-bold font-display rounded-lg hover:bg-gray-50 transition shadow-sm shadow-esn-dark-blue/10 hover:shadow-md hover:shadow-esn-dark-blue/20 uppercase flex items-center justify-center gap-2 text-sm sm:text-base border-2 border-esn-dark-blue"
                                       aria-label="Read the full story of the 2025 Barriers of Mobility report"
                                   >
                                       Read the Full Story

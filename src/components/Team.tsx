@@ -38,7 +38,7 @@ const teamMembers = [
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8" role="list">
             {teamMembers.map((member, index) => (
               <article key={index} className="flex flex-col items-center text-center group">
-                <div className="w-32 h-32 mb-6 rounded-full bg-gray-200 border-4 border-white shadow-lg flex items-center justify-center overflow-hidden group-hover:border-esn-cyan transition-colors duration-300" aria-hidden="true">
+                <div className="w-32 h-32 mb-6 rounded-full bg-gray-200 border-4 border-white shadow-lg shadow-esn-dark-blue/15 flex items-center justify-center overflow-hidden group-hover:border-esn-cyan group-hover:shadow-xl group-hover:shadow-esn-cyan/25 transition-all duration-300" aria-hidden="true">
                   {member.image ? (
                     <img src={member.image} alt={`${member.name}, ${member.role}`} className="w-full h-full object-cover" />
                   ) : (

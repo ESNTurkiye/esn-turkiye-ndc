@@ -1,5 +1,6 @@
 import { useState } from "react";
 import type { NavigationLink } from "./index";
+import { SURVEY_URL } from "./index";
 
 interface MobileHeaderProps {
     navigationLinks: NavigationLink[];
@@ -15,23 +16,27 @@ const MobileHeader = ({ navigationLinks, scrollToSection }: MobileHeaderProps) =
 
     const onLinkClick = (sectionId: string) => {
         setIsMenuOpen(false);
+        if (sectionId === 'survey') {
+            window.open(SURVEY_URL, '_blank', 'noopener,noreferrer');
+            return;
+        }
         scrollToSection(sectionId);
     };
 
     return (
-        <header className="fixed w-full bg-esn-dark-blue shadow-sm z-50 border-b border-esn-dark-blue/20 md:hidden">
+        <header className="fixed w-full bg-esn-dark-blue shadow-md shadow-esn-dark-blue/20 z-50 border-b border-esn-dark-blue/20 md:hidden">
             <div className="container mx-auto px-4 py-2 flex justify-between items-center">
-                <a 
-                    href="#" 
+                <a
+                    href="#"
                     onClick={(e) => {
                         e.preventDefault();
                         window.scrollTo({ top: 0, behavior: 'smooth' });
                     }}
                     className="flex items-center gap-2 hover:opacity-90 transition-opacity"
                 >
-                    <img 
-                        src="/assets/images/logos/web-TR-colour-white.png" 
-                        alt="ESN Türkiye Logo" 
+                    <img
+                        src="/assets/images/logos/web-TR-colour-white.png"
+                        alt="ESN Türkiye Logo"
                         className="h-14 w-auto object-contain"
                     />
                     <div className="flex flex-col leading-tight">
@@ -41,7 +46,7 @@ const MobileHeader = ({ navigationLinks, scrollToSection }: MobileHeaderProps) =
                     </div>
                 </a>
 
-                <button 
+                <button
                     className="text-white p-1"
                     onClick={toggleMenu}
                     aria-label="Toggle navigation menu"
@@ -60,11 +65,10 @@ const MobileHeader = ({ navigationLinks, scrollToSection }: MobileHeaderProps) =
                 </button>
             </div>
 
-            <div 
+            <div
                 id="mobile-navigation"
-                className={`absolute top-full left-0 w-full bg-white shadow-lg border-b border-gray-100 transition-all duration-300 ease-in-out ${
-                    isMenuOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0 overflow-hidden"
-                }`}
+                className={`absolute top-full left-0 w-full bg-white shadow-xl shadow-esn-dark-blue/15 border-b border-gray-100 transition-all duration-300 ease-in-out ${isMenuOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0 overflow-hidden"
+                    }`}
             >
                 <nav className="container mx-auto px-4 py-4" aria-label="Mobile navigation">
                     <ul className="flex flex-col space-y-4" role="list">
@@ -73,7 +77,7 @@ const MobileHeader = ({ navigationLinks, scrollToSection }: MobileHeaderProps) =
                                 {link.isButton ? (
                                     <button
                                         onClick={() => onLinkClick(link.sectionId)}
-                                        className="bg-esn-dark-blue text-white px-6 py-3 rounded-full hover:bg-blue-900 transition shadow-md shadow-blue-900/20 w-full font-body font-bold text-sm tracking-wider"
+                                        className="bg-esn-dark-blue text-white px-6 py-3 rounded-full hover:bg-blue-900 transition shadow-md shadow-esn-dark-blue/25 hover:shadow-lg hover:shadow-esn-dark-blue/35 w-full font-body font-bold text-sm tracking-wider"
                                         aria-label={`Navigate to ${link.label} section`}
                                     >
                                         {link.label.toUpperCase()}

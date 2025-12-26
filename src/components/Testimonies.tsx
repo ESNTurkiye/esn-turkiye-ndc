@@ -46,7 +46,7 @@ const Testimonies = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8" role="list">
                     {testimonies.map((item) => (
-                        <article key={item.id} className="bg-gray-50 border border-gray-100 p-8 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+                        <article key={item.id} className="bg-gray-50 border border-gray-100 p-8 shadow-md shadow-gray-200/30 hover:shadow-xl hover:shadow-esn-dark-blue/15 hover:-translate-y-1 transition-all duration-300 group">
                             <div className="mb-4">
                                 <span className="bg-esn-orange/10 text-esn-orange text-xs font-bold px-3 py-1 uppercase" aria-label={`Category: ${item.category}`}>
                                     {item.category}

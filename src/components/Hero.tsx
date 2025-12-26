@@ -1,3 +1,6 @@
+// Survey link - will be updated to https://www.limesurvey.org later
+const SURVEY_URL = "https://esnturkey.org/";
+
 const Hero = () => {
     return (
         <section id="top" className="relative min-h-[90vh] flex items-center justify-center bg-esn-dark-blue pt-20 overflow-hidden">
@@ -7,7 +10,7 @@ const Hero = () => {
 
             <div className="container mx-auto px-4 text-center z-10">
 
-                <span className="inline-block py-2 px-4 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white text-xs font-bold mb-6 tracking-[0.2em] shadow-sm uppercase">
+                <span className="inline-block py-2 px-4 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white text-xs font-bold mb-6 tracking-[0.2em] shadow-md shadow-white/10 uppercase">
                     Research Project by ESN Türkiye
                 </span>
 
@@ -25,22 +28,16 @@ const Hero = () => {
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center font-display">
-                    <button 
-                        onClick={() => {
-                            const element = document.getElementById('testimonies');
-                            if (element) {
-                                const headerOffset = 100;
-                                const elementPosition = element.getBoundingClientRect().top;
-                                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-                                window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
-                            }
-                        }}
-                        className="relative px-8 py-4 rounded-lg font-bold tracking-wide shadow-lg shadow-esn-cyan/20 uppercase overflow-hidden group bg-esn-light-blue"
+                    <a 
+                        href={SURVEY_URL}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="relative px-8 py-4 rounded-lg font-bold tracking-wide shadow-lg shadow-esn-cyan/25 hover:shadow-xl hover:shadow-esn-cyan/30 transition-shadow duration-300 uppercase overflow-hidden group bg-esn-light-blue inline-block text-center"
                         aria-label="Share your visa experience story"
                     >
                         <span className="absolute inset-0 bg-esn-cyan origin-center scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out"></span>
                         <span className="relative z-10 text-white">Share Your Story</span>
-                    </button>
+                    </a>
                     <button 
                         onClick={() => {
                             const element = document.getElementById('report-2025');
@@ -51,7 +48,7 @@ const Hero = () => {
                                 window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
                             }
                         }}
-                        className="relative px-8 py-4 bg-transparent text-white border-2 border-white rounded-lg font-bold tracking-wide uppercase overflow-hidden group"
+                        className="relative px-8 py-4 bg-transparent text-white border-2 border-white rounded-lg font-bold tracking-wide shadow-md shadow-white/10 hover:shadow-lg hover:shadow-white/20 transition-shadow duration-300 uppercase overflow-hidden group"
                         aria-label="Read the 2025 Barriers of Mobility report"
                     >
                         <span className="absolute inset-0 bg-white origin-center scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out"></span>
