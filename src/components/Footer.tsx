@@ -1,24 +1,24 @@
 const Footer = () => {
     return (
-        <footer className="bg-[#333333] text-gray-200 pt-6 sm:pt-8 md:pt-10 lg:pt-12 font-body text-sm leading-relaxed">
+        <footer className="bg-gray-100 text-gray-800 pt-6 sm:pt-8 md:pt-10 lg:pt-12 font-body text-sm leading-relaxed">
             <div className="container mx-auto px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 pb-6 sm:pb-8 md:pb-10 lg:pb-12">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 md:gap-10 lg:gap-12">
 
                     <div className="space-y-3 sm:space-y-4 md:space-y-4 lg:space-y-5">
                         <img
-                            src="/assets/images/logos/web-TR-colour-white.png"
+                            src="/assets/images/logos/web-tr-colour-black.png"
                             alt="ESN Türkiye Logo"
                             className="h-8 sm:h-10 md:h-12 lg:h-14 w-auto object-contain"
                         />
-                        <p className="text-gray-300 text-xs sm:text-xs md:text-sm lg:text-base">
+                        <p className="text-gray-700 text-xs sm:text-xs md:text-sm lg:text-base">
                             ESN Türkiye is the national level of the Erasmus Student Network.
                             We are a non-partisan, non-profit, international student organisation.
                             Our mission is to represent international students, thus provide opportunities
                             for cultural understanding and self-development under the principle of
-                            <span className="text-esn-cyan font-bold italic"> Students Helping Students</span>.
+                            <span className="text-esn-dark-blue font-bold italic"> Students Helping Students</span>.
                         </p>
                         <div>
-                            <a href="#" className="text-gray-400 hover:text-esn-cyan underline decoration-gray-500 underline-offset-4 transition">
+                            <a href="#" className="text-gray-600 hover:text-esn-dark-blue underline decoration-gray-400 underline-offset-4 transition">
                                 Privacy Policy
                             </a>
                         </div>
@@ -26,22 +26,22 @@ const Footer = () => {
 
                     <div className="space-y-3 sm:space-y-4 md:space-y-4 lg:space-y-5">
                         <div className="pt-2 sm:pt-2 md:pt-0">
-                            <h4 className="text-white font-display uppercase tracking-wide mb-2 text-xs sm:text-xs md:text-sm lg:text-base">National Development Committee</h4>
-                            <p className="text-gray-400 text-xs sm:text-xs md:text-sm">
-                                This platform is managed by the NDC to ensure quality standards across all ESN Türkiye sections.
+                            <h4 className="text-gray-900 font-display uppercase tracking-wide mb-2 text-xs sm:text-xs md:text-sm lg:text-base">Project Governance</h4>
+                            <p className="text-gray-700 text-xs sm:text-xs md:text-sm">
+                                Barriers of Mobility is a research project managed by the National Development Committee (NDC) of ESN Türkiye.
                             </p>
                         </div>
                     </div>
 
                     <div className="space-y-3 sm:space-y-4 md:space-y-4 lg:space-y-5">
                         <div>
-                            <h5 className="text-white font-display uppercase tracking-wide mb-2 sm:mb-3 text-xs sm:text-xs md:text-sm lg:text-base">Follow Us</h5>
+                            <h5 className="text-gray-900 font-display uppercase tracking-wide mb-2 sm:mb-3 text-xs sm:text-xs md:text-sm lg:text-base">Follow Us</h5>
                             <div className="flex flex-wrap gap-3 sm:gap-4">
                                 <a 
                                     href="https://www.facebook.com/esnturkey" 
                                     target="_blank" 
                                     rel="noopener noreferrer"
-                                    className="text-gray-400 hover:text-esn-cyan transition-colors"
+                                    className="text-gray-600 hover:text-esn-dark-blue transition-colors"
                                     aria-label="Facebook"
                                 >
                                     <svg className="w-6 h-6 sm:w-6 md:w-7 lg:w-8" fill="currentColor" viewBox="0 0 24 24">
@@ -52,7 +52,7 @@ const Footer = () => {
                                     href="https://www.instagram.com/esnturkey" 
                                     target="_blank" 
                                     rel="noopener noreferrer"
-                                    className="text-gray-400 hover:text-esn-cyan transition-colors"
+                                    className="text-gray-600 hover:text-esn-dark-blue transition-colors"
                                     aria-label="Instagram"
                                 >
                                     <svg className="w-6 h-6 sm:w-6 md:w-7 lg:w-8" fill="currentColor" viewBox="0 0 24 24">
@@ -63,7 +63,7 @@ const Footer = () => {
                                     href="https://www.linkedin.com/company/esn-turkiye" 
                                     target="_blank" 
                                     rel="noopener noreferrer"
-                                    className="text-gray-400 hover:text-esn-cyan transition-colors"
+                                    className="text-gray-600 hover:text-esn-dark-blue transition-colors"
                                     aria-label="LinkedIn"
                                 >
                                     <svg className="w-6 h-6 sm:w-6 md:w-7 lg:w-8" fill="currentColor" viewBox="0 0 24 24">
@@ -74,7 +74,7 @@ const Footer = () => {
                                     href="https://twitter.com/esnturkey" 
                                     target="_blank" 
                                     rel="noopener noreferrer"
-                                    className="text-gray-400 hover:text-esn-cyan transition-colors"
+                                    className="text-gray-600 hover:text-esn-dark-blue transition-colors"
                                     aria-label="Twitter"
                                 >
                                     <svg className="w-6 h-6 sm:w-6 md:w-7 lg:w-8" fill="currentColor" viewBox="0 0 24 24">
@@ -83,8 +83,8 @@ const Footer = () => {
                                 </a>
                             </div>
                         </div>
-                        <div className="pt-3 sm:pt-4 md:pt-4 border-t border-gray-600">
-                            <p className="text-gray-400 text-xs sm:text-xs md:text-sm leading-relaxed">
+                        <div className="pt-3 sm:pt-4 md:pt-4 border-t border-gray-300">
+                            <p className="text-gray-600 text-xs sm:text-xs md:text-sm leading-relaxed">
                                 We've taken extra care to reach high accessibility standards. If you have any comment, please let us know.
                             </p>
                         </div>
@@ -93,12 +93,12 @@ const Footer = () => {
                 </div>
             </div>
 
-            <div className="bg-[#222222] py-2 sm:py-2.5 md:py-3 lg:py-3">
-                <div className="container mx-auto px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 flex flex-col md:flex-row justify-between items-center gap-3 sm:gap-3 md:gap-4 lg:gap-6 text-[10px] sm:text-[10px] md:text-xs lg:text-sm text-gray-400">
+            <div className="bg-gray-200 py-2 sm:py-2.5 md:py-3 lg:py-3 border-t border-gray-300">
+                <div className="container mx-auto px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 flex flex-col md:flex-row justify-between items-center gap-3 sm:gap-3 md:gap-4 lg:gap-6 text-[10px] sm:text-[10px] md:text-xs lg:text-sm text-gray-600">
 
                     <div className="flex items-center gap-2 sm:gap-2 md:gap-3 lg:gap-4">
                         <span className="text-center md:text-left">
-                            The NDC Platform is made by the <span className="bg-[#333333] px-2 py-1 rounded text-gray-300">Web Team of ESN Türkiye</span>
+                            This platform is made by the <span className="bg-gray-300 px-2 py-1 text-gray-800">WebTeam of ESN Türkiye</span>
                         </span>
                     </div>
 

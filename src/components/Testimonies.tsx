@@ -35,6 +35,9 @@ const Testimonies = () => {
                         <h2 className="text-4xl font-display font-bold text-gray-900 mt-2 uppercase">
                             Visa <span className="text-esn-cyan">Testimonies</span>
                         </h2>
+                        <p className="text-gray-600 mt-3 text-base max-w-2xl">
+                            Real stories from the Erasmus Generation. Read about the challenges faced during the visa process.
+                        </p>
                     </div>
                     <a href="#" className="hidden md:block text-esn-dark-blue font-bold hover:underline decoration-2 underline-offset-4">
                         View All Stories &rarr;
@@ -43,9 +46,9 @@ const Testimonies = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {testimonies.map((item) => (
-                        <div key={item.id} className="bg-gray-50 border border-gray-100 p-8 rounded-xl hover:shadow-xl transition-all duration-300 group">
+                        <div key={item.id} className="bg-gray-50 border border-gray-100 p-8 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group cursor-pointer">
                             <div className="mb-4">
-                                <span className="bg-esn-orange/10 text-esn-orange text-xs font-bold px-3 py-1 rounded-full uppercase">
+                                <span className="bg-esn-orange/10 text-esn-orange text-xs font-bold px-3 py-1 uppercase">
                                     {item.category}
                                 </span>
                             </div>
@@ -55,8 +58,8 @@ const Testimonies = () => {
                             <p className="text-gray-600 text-sm mb-6 leading-relaxed">
                                 "{item.preview}"
                             </p>
-                            <div className="flex items-center gap-3 pt-4 border-t border-gray-200">
-                                <div className="w-8 h-8 rounded-full bg-gray-300 flex items-center justify-center text-white text-xs font-bold">
+                            <div className="flex items-center gap-3 pt-4 border-t border-gray-200 mb-4">
+                                <div className="w-8 h-8 bg-gray-300 flex items-center justify-center text-white text-xs font-bold">
                                     {item.name[0]}
                                 </div>
                                 <div className="text-xs">
@@ -64,6 +67,15 @@ const Testimonies = () => {
                                     <p className="text-gray-500">{item.country}</p>
                                 </div>
                             </div>
+                            <a 
+                                href="#" 
+                                className="inline-flex items-center gap-2 text-esn-dark-blue font-bold text-sm hover:text-esn-cyan transition-colors group/link"
+                            >
+                                Read Full Story
+                                <svg className="w-4 h-4 transition-transform group-hover/link:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                </svg>
+                            </a>
                         </div>
                     ))}
                 </div>

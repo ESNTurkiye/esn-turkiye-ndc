@@ -2,7 +2,7 @@ const teamMembers = [
     {
       name: "Efe Berke",
       role: "NB Responsible",
-      image: null // Fotoğraf varsa buraya path verilecek
+      image: null
     },
     {
       name: "Sedanur",
@@ -19,7 +19,6 @@ const teamMembers = [
       role: "Vice Chair of Strategy Team",
       image: null
     }
-    // Diğer üyeler buraya eklenebilir
   ];
   
   const Team = () => {
@@ -40,7 +39,6 @@ const teamMembers = [
             {teamMembers.map((member, index) => (
               <div key={index} className="flex flex-col items-center text-center group">
                 <div className="w-32 h-32 mb-6 rounded-full bg-gray-200 border-4 border-white shadow-lg flex items-center justify-center overflow-hidden group-hover:border-esn-cyan transition-colors duration-300">
-                  {/* Fotoğraf yoksa Baş harfler */}
                   {member.image ? (
                     <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
                   ) : (

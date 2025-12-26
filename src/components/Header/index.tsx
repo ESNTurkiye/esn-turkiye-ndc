@@ -9,7 +9,7 @@ const Header = () => {
         }
         const element = document.getElementById(sectionId);
         if (element) {
-            const headerOffset = window.innerWidth >= 768 ? 100 : 80; // Desktop için 100px, mobile için 80px
+            const headerOffset = window.innerWidth >= 768 ? 100 : 80;
             const elementPosition = element.getBoundingClientRect().top;
             const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
