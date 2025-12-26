@@ -1,6 +1,12 @@
 import MobileHeader from "./MobileHeader";
 import DesktopHeader from "./DesktopHeader";
 
+export interface NavigationLink {
+    label: string;
+    sectionId: string;
+    isButton?: boolean;
+}
+
 const Header = () => {
     const scrollToSection = (sectionId: string) => {
         if (sectionId === 'top' || sectionId === 'home') {
@@ -20,26 +26,42 @@ const Header = () => {
         }
     };
 
-    const mobileNavigationLinks = [
+    // Shared navigation links for both mobile and desktop
+    const navigationLinks: NavigationLink[] = [
         { label: "HOME", sectionId: "top" },
         { label: "Introduction", sectionId: "introduction" },
         { label: "2025 Edition", sectionId: "report-2025" },
         { label: "The Team", sectionId: "team" },
-        { label: "Take Survey", sectionId: "survey" },
+        { label: "Testimonies", sectionId: "testimonies" },
+        { label: "Take Survey", sectionId: "survey", isButton: true },
     ];
+
+    // Desktop navigation structure (for dropdown menu)
+    const desktopNavigation = {
+        main: [
+            { label: "HOME", sectionId: "top" },
+        ],
+        about: [
+            { label: "Introduction", sectionId: "introduction" },
+            { label: "2025 Edition", sectionId: "report-2025" },
+            { label: "The Team", sectionId: "team" },
+            { label: "Testimonies", sectionId: "testimonies" },
+        ],
+        survey: { label: "Take Survey", sectionId: "survey" },
+    };
 
     return (
         <>
             <MobileHeader 
-                navigationLinks={mobileNavigationLinks} 
+                navigationLinks={navigationLinks} 
                 scrollToSection={scrollToSection} 
             />
             <DesktopHeader 
                 scrollToSection={scrollToSection}
+                navigationLinks={desktopNavigation}
             />
         </>
     );
 };
 
 export default Header;
-

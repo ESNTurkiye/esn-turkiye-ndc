@@ -35,19 +35,19 @@ const teamMembers = [
             </p>
           </div>
   
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8" role="list">
             {teamMembers.map((member, index) => (
-              <div key={index} className="flex flex-col items-center text-center group">
-                <div className="w-32 h-32 mb-6 rounded-full bg-gray-200 border-4 border-white shadow-lg flex items-center justify-center overflow-hidden group-hover:border-esn-cyan transition-colors duration-300">
+              <article key={index} className="flex flex-col items-center text-center group">
+                <div className="w-32 h-32 mb-6 rounded-full bg-gray-200 border-4 border-white shadow-lg flex items-center justify-center overflow-hidden group-hover:border-esn-cyan transition-colors duration-300" aria-hidden="true">
                   {member.image ? (
-                    <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
+                    <img src={member.image} alt={`${member.name}, ${member.role}`} className="w-full h-full object-cover" />
                   ) : (
-                    <span className="text-3xl font-bold text-gray-400">{member.name[0]}</span>
+                    <span className="text-3xl font-bold text-gray-400" aria-hidden="true">{member.name[0]}</span>
                   )}
                 </div>
                 <h3 className="text-xl font-display font-bold text-gray-900">{member.name}</h3>
-                <span className="text-esn-magenta text-sm font-bold uppercase tracking-wide mt-1">{member.role}</span>
-              </div>
+                <p className="text-esn-magenta text-sm font-bold uppercase tracking-wide mt-1">{member.role}</p>
+              </article>
             ))}
           </div>
         </div>

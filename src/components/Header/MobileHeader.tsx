@@ -1,7 +1,8 @@
 import { useState } from "react";
+import type { NavigationLink } from "./index";
 
 interface MobileHeaderProps {
-    navigationLinks: Array<{ label: string; sectionId: string }>;
+    navigationLinks: NavigationLink[];
     scrollToSection: (sectionId: string) => void;
 }
 
@@ -43,7 +44,9 @@ const MobileHeader = ({ navigationLinks, scrollToSection }: MobileHeaderProps) =
                 <button 
                     className="text-white p-1"
                     onClick={toggleMenu}
-                    aria-label="Toggle menu"
+                    aria-label="Toggle navigation menu"
+                    aria-expanded={isMenuOpen}
+                    aria-controls="mobile-navigation"
                 >
                     {isMenuOpen ? (
                         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -58,18 +61,20 @@ const MobileHeader = ({ navigationLinks, scrollToSection }: MobileHeaderProps) =
             </div>
 
             <div 
+                id="mobile-navigation"
                 className={`absolute top-full left-0 w-full bg-white shadow-lg border-b border-gray-100 transition-all duration-300 ease-in-out ${
                     isMenuOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0 overflow-hidden"
                 }`}
             >
-                <nav className="container mx-auto px-4 py-4">
-                    <ul className="flex flex-col space-y-4">
+                <nav className="container mx-auto px-4 py-4" aria-label="Mobile navigation">
+                    <ul className="flex flex-col space-y-4" role="list">
                         {navigationLinks.map((link) => (
-                            <li key={link.label}>
-                                {link.sectionId === 'survey' ? (
+                            <li key={link.sectionId}>
+                                {link.isButton ? (
                                     <button
                                         onClick={() => onLinkClick(link.sectionId)}
                                         className="bg-esn-dark-blue text-white px-6 py-3 rounded-full hover:bg-blue-900 transition shadow-md shadow-blue-900/20 w-full font-body font-bold text-sm tracking-wider"
+                                        aria-label={`Navigate to ${link.label} section`}
                                     >
                                         {link.label.toUpperCase()}
                                     </button>
@@ -77,6 +82,7 @@ const MobileHeader = ({ navigationLinks, scrollToSection }: MobileHeaderProps) =
                                     <button
                                         onClick={() => onLinkClick(link.sectionId)}
                                         className="text-gray-700 font-body font-bold text-sm tracking-wider py-2 block w-full text-left hover:text-esn-cyan transition-colors"
+                                        aria-label={`Navigate to ${link.label} section`}
                                     >
                                         {link.label}
                                     </button>

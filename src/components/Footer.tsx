@@ -7,8 +7,10 @@ const Footer = () => {
                     <div className="space-y-3 sm:space-y-4 md:space-y-4 lg:space-y-5">
                         <img
                             src="/assets/images/logos/web-tr-colour-black.png"
-                            alt="ESN Türkiye Logo"
+                            alt="ESN Türkiye - Erasmus Student Network Türkiye Logo"
                             className="h-8 sm:h-10 md:h-12 lg:h-14 w-auto object-contain"
+                            width="auto"
+                            height="56"
                         />
                         <p className="text-gray-700 text-xs sm:text-xs md:text-sm lg:text-base">
                             ESN Türkiye is the national level of the Erasmus Student Network.
@@ -17,7 +19,7 @@ const Footer = () => {
                             for cultural understanding and self-development under the principle of
                             <span className="text-esn-dark-blue font-bold italic"> Students Helping Students</span>.
                         </p>
-                        <div>
+                    <div>
                             <a href="#" className="text-gray-600 hover:text-esn-dark-blue underline decoration-gray-400 underline-offset-4 transition">
                                 Privacy Policy
                             </a>

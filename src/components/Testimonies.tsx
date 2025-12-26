@@ -39,27 +39,27 @@ const Testimonies = () => {
                             Real stories from the Erasmus Generation. Read about the challenges faced during the visa process.
                         </p>
                     </div>
-                    <a href="#" className="hidden md:block text-esn-dark-blue font-bold hover:underline decoration-2 underline-offset-4">
+                    <a href="#" className="hidden md:block text-esn-dark-blue font-bold hover:underline decoration-2 underline-offset-4" aria-label="View all visa testimonial stories">
                         View All Stories &rarr;
                     </a>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8" role="list">
                     {testimonies.map((item) => (
-                        <div key={item.id} className="bg-gray-50 border border-gray-100 p-8 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group cursor-pointer">
+                        <article key={item.id} className="bg-gray-50 border border-gray-100 p-8 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
                             <div className="mb-4">
-                                <span className="bg-esn-orange/10 text-esn-orange text-xs font-bold px-3 py-1 uppercase">
+                                <span className="bg-esn-orange/10 text-esn-orange text-xs font-bold px-3 py-1 uppercase" aria-label={`Category: ${item.category}`}>
                                     {item.category}
                                 </span>
                             </div>
                             <h3 className="text-xl font-display font-bold text-gray-800 mb-3 group-hover:text-esn-dark-blue transition-colors">
                                 {item.title}
                             </h3>
-                            <p className="text-gray-600 text-sm mb-6 leading-relaxed">
+                            <blockquote className="text-gray-600 text-sm mb-6 leading-relaxed">
                                 "{item.preview}"
-                            </p>
+                            </blockquote>
                             <div className="flex items-center gap-3 pt-4 border-t border-gray-200 mb-4">
-                                <div className="w-8 h-8 bg-gray-300 flex items-center justify-center text-white text-xs font-bold">
+                                <div className="w-8 h-8 rounded-full bg-gray-300 flex items-center justify-center text-white text-xs font-bold" aria-hidden="true">
                                     {item.name[0]}
                                 </div>
                                 <div className="text-xs">
@@ -70,18 +70,19 @@ const Testimonies = () => {
                             <a 
                                 href="#" 
                                 className="inline-flex items-center gap-2 text-esn-dark-blue font-bold text-sm hover:text-esn-cyan transition-colors group/link"
+                                aria-label={`Read full story: ${item.title}`}
                             >
                                 Read Full Story
-                                <svg className="w-4 h-4 transition-transform group-hover/link:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <svg className="w-4 h-4 transition-transform group-hover/link:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                                 </svg>
                             </a>
-                        </div>
+                        </article>
                     ))}
                 </div>
 
                 <div className="mt-8 text-center md:hidden">
-                    <a href="#" className="text-esn-dark-blue font-bold hover:underline">View All Stories &rarr;</a>
+                    <a href="#" className="text-esn-dark-blue font-bold hover:underline" aria-label="View all visa testimonial stories">View All Stories &rarr;</a>
                 </div>
             </div>
         </section>
