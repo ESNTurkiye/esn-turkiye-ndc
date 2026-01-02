@@ -79,9 +79,9 @@ h1, h2, h3, h4, h5, h6 {
     width: 0;
     height: 0;
     border-style: solid;
-    border-width: 0 80px 80px 0;
+    border-width: 0 40px 40px 0;
     border-color: transparent #d1d5db transparent transparent;
-    box-shadow: -3px 3px 5px rgba(0, 0, 0, 0.15), inset -1px 1px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.15), inset -1px 1px 2px rgba(0, 0, 0, 0.1);
     z-index: 1;
 }
 
@@ -93,7 +93,52 @@ h1, h2, h3, h4, h5, h6 {
     width: 0;
     height: 0;
     border-style: solid;
-    border-width: 0 78px 78px 0;
+    border-width: 0 38px 38px 0;
     border-color: transparent #e5e7eb transparent transparent;
     z-index: 2;
+}
+
+/* Responsive paper-fold sizes */
+@media (min-width: 640px) {
+    .paper-fold::before {
+        border-width: 0 50px 50px 0;
+        box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.15), inset -1px 1px 2px rgba(0, 0, 0, 0.1);
+    }
+    
+    .paper-fold::after {
+        border-width: 0 48px 48px 0;
+    }
+}
+
+@media (min-width: 768px) {
+    .paper-fold::before {
+        border-width: 0 60px 60px 0;
+        box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.15), inset -1px 1px 2px rgba(0, 0, 0, 0.1);
+    }
+    
+    .paper-fold::after {
+        border-width: 0 58px 58px 0;
+    }
+}
+
+@media (min-width: 1024px) {
+    .paper-fold::before {
+        border-width: 0 70px 70px 0;
+        box-shadow: -3px 3px 5px rgba(0, 0, 0, 0.15), inset -1px 1px 2px rgba(0, 0, 0, 0.1);
+    }
+    
+    .paper-fold::after {
+        border-width: 0 68px 68px 0;
+    }
+}
+
+@media (min-width: 1280px) {
+    .paper-fold::before {
+        border-width: 0 80px 80px 0;
+        box-shadow: -3px 3px 5px rgba(0, 0, 0, 0.15), inset -1px 1px 2px rgba(0, 0, 0, 0.1);
+    }
+    
+    .paper-fold::after {
+        border-width: 0 78px 78px 0;
+    }
 }
