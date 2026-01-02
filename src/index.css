@@ -65,3 +65,35 @@ h1, h2, h3, h4, h5, h6 {
     font-family: "Kelson Sans", "Lato", sans-serif;
     text-transform: uppercase;
 }
+
+/* Folded corner effect for paper-like appearance */
+.paper-fold {
+    position: relative;
+}
+
+.paper-fold::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 80px 80px 0;
+    border-color: transparent #d1d5db transparent transparent;
+    box-shadow: -3px 3px 5px rgba(0, 0, 0, 0.15), inset -1px 1px 2px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.paper-fold::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 78px 78px 0;
+    border-color: transparent #e5e7eb transparent transparent;
+    z-index: 2;
+}

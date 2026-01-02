@@ -12,7 +12,7 @@ const testimonies = [
         name: "Anonymous",
         country: "Italy Destination",
         title: "Rejected without a clear reason",
-        preview: "Despite having all my documents, financial proof, and acceptance letter ready, I received a rejection letter stating article 13...",
+        preview: "Despite having all my documents, financial proof and acceptance letter ready, I received a rejection letter stating article 13...",
         category: "Rejection"
     },
     {
@@ -67,16 +67,6 @@ const Testimonies = () => {
                                     <p className="text-gray-500">{item.country}</p>
                                 </div>
                             </div>
-                            <a 
-                                href="#" 
-                                className="inline-flex items-center gap-2 text-esn-dark-blue font-bold text-sm hover:text-esn-cyan transition-colors group/link"
-                                aria-label={`Read full story: ${item.title}`}
-                            >
-                                Read Full Story
-                                <svg className="w-4 h-4 transition-transform group-hover/link:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                                </svg>
-                            </a>
                         </article>
                     ))}
                 </div>

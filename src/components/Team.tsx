@@ -1,23 +1,18 @@
 const teamMembers = [
     {
-      name: "Efe Berke",
-      role: "NB Responsible",
-      image: "/image/team/efe-berke.png"
+      name: "Sedanur Demiral",
+      role: "NDC Main Chair",
+      image: "/image/team/sedanur.jpeg"
     },
     {
-      name: "Sedanur",
-      role: "Main Chair",
-      image: "/image/team/sedanur.png"
+      name: "Ömer Çavuşoğlu",
+      role: "NDC Survey Team Vice Chair",
+      image: "/image/team/omer.jpeg"
     },
     {
-      name: "Deniz Gülse",
-      role: "Vice Chair of Int. Helpline",
-      image: "/image/team/deniz-gulse.png"
-    },
-    {
-      name: "Yusuf",
-      role: "Vice Chair of Strategy Team",
-      image: "/image/team/yusuf.png"
+      name: "Efe Berke Akkaya",
+      role: "ESN Türkiye President",
+      image: "/image/team/efe-berke.jpeg"
     }
   ];
   
@@ -38,11 +33,11 @@ const teamMembers = [
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8" role="list">
             {teamMembers.map((member, index) => (
               <article key={index} className="flex flex-col items-center text-center group">
-                <div className="w-32 h-32 mb-6 rounded-full bg-gray-200 border-4 border-white shadow-lg shadow-esn-dark-blue/15 flex items-center justify-center overflow-hidden group-hover:border-esn-cyan group-hover:shadow-xl group-hover:shadow-esn-cyan/25 transition-all duration-300" aria-hidden="true">
+                <div className={`w-32 h-32 mb-6 rounded-full border-4 border-white shadow-lg shadow-esn-dark-blue/15 flex items-center justify-center overflow-hidden group-hover:border-esn-cyan group-hover:shadow-xl group-hover:shadow-esn-cyan/25 transition-all duration-300 ${member.image ? 'bg-gray-200' : 'bg-esn-light-blue/10'}`} aria-hidden="true">
                   {member.image ? (
                     <img src={member.image} alt={`${member.name}, ${member.role}`} className="w-full h-full object-cover" />
                   ) : (
-                    <span className="text-3xl font-bold text-gray-400" aria-hidden="true">{member.name[0]}</span>
+                    <span className="text-3xl font-bold text-esn-dark-blue" aria-hidden="true">{member.name[0]}</span>
                   )}
                 </div>
                 <h3 className="text-xl font-display font-bold text-gray-900">{member.name}</h3>
