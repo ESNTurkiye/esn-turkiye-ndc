@@ -24,15 +24,16 @@ const Hero = () => {
                     Research Project by ESN Türkiye
                 </span>
 
-                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold text-white mb-6 leading-tight uppercase">
-                    Mobility is a Right <br />
-                    <span className="text-esn-cyan">
+                <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-4 sm:mb-6 leading-[1.2] sm:leading-tight uppercase break-words px-2">
+                    <span>Mobility is a Right</span>
+                    <br className="hidden sm:block" />
+                    <span className="text-esn-cyan block sm:inline">
                         Not a Privilege
                     </span>
                 </h1>
 
                 <p className="text-base sm:text-lg md:text-xl text-gray-100 mb-10 max-w-3xl mx-auto font-body font-light">
-                    International students face increasing visa barriers. Currently, we are identifying, analyzing,
+                    International students face increasing visa barriers. Currently we are identifying, analyzing
                     and reporting these obstacles to influence policy makers. <br />
                     <span className="font-bold text-white">Your voice matters in this process.</span>
                 </p>
@@ -42,11 +43,11 @@ const Hero = () => {
                         href={SURVEY_URL}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="relative px-8 py-4 rounded-lg font-bold tracking-wide shadow-lg shadow-esn-cyan/25 hover:shadow-xl hover:shadow-esn-cyan/30 transition-shadow duration-300 uppercase overflow-hidden group bg-esn-light-blue inline-block text-center"
+                        className="relative px-8 py-4 rounded-lg font-bold tracking-wide shadow-lg shadow-esn-light-blue/25 hover:shadow-xl hover:shadow-esn-light-blue/30 transition-shadow duration-300 uppercase overflow-hidden group bg-esn-light-blue inline-block text-center"
                         aria-label="Share your visa experience story"
                     >
-                        <span className="absolute inset-0 bg-esn-cyan origin-center scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out"></span>
-                        <span className="relative z-10 text-white">Share Your Story</span>
+                        <span className="absolute inset-0 bg-white origin-center scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out"></span>
+                        <span className="relative z-10 text-white group-hover:text-esn-dark-blue transition-colors duration-300">Share Your Story</span>
                     </a>
                     <button
                         onClick={() => {
@@ -64,6 +65,31 @@ const Hero = () => {
                         <span className="absolute inset-0 bg-white origin-center scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out"></span>
                         <span className="relative z-10 group-hover:text-esn-dark-blue transition-colors duration-300">Read 2025 Report</span>
                     </button>
+                </div>
+            </div>
+
+            {/* Scroll Down Indicator */}
+            <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 animate-bounce">
+                <div className="flex flex-col items-center gap-2 text-white/80 hover:text-white transition-colors cursor-pointer group" 
+                     onClick={() => {
+                         const element = document.getElementById('report-2025') || document.querySelector('section:nth-of-type(2)');
+                         if (element) {
+                             const headerOffset = 100;
+                             const elementPosition = element.getBoundingClientRect().top;
+                             const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                             window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+                         }
+                     }}>
+                    <span className="text-xs font-display uppercase tracking-wider font-semibold">Scroll Down</span>
+                    <svg 
+                        className="w-6 h-6 group-hover:translate-y-1 transition-transform duration-300" 
+                        fill="none" 
+                        stroke="currentColor" 
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                    >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                    </svg>
                 </div>
             </div>
         </section>
