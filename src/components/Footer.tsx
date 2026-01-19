@@ -40,7 +40,7 @@ const Footer = () => {
                             <h5 className="text-gray-900 font-display uppercase tracking-wide mb-2 sm:mb-3 text-xs sm:text-xs md:text-sm lg:text-base">Follow Us</h5>
                             <div className="flex flex-wrap gap-3 sm:gap-4">
                                 <a 
-                                    href="https://www.facebook.com/esnturkey" 
+                                    href="https://www.facebook.com/esntr/?locale=tr_TR" 
                                     target="_blank" 
                                     rel="noopener noreferrer"
                                     className="text-gray-600 hover:text-esn-dark-blue transition-colors"
@@ -51,7 +51,7 @@ const Footer = () => {
                                     </svg>
                                 </a>
                                 <a 
-                                    href="https://www.instagram.com/esnturkey" 
+                                    href="https://www.instagram.com/esnturkiye/" 
                                     target="_blank" 
                                     rel="noopener noreferrer"
                                     className="text-gray-600 hover:text-esn-dark-blue transition-colors"
@@ -62,7 +62,7 @@ const Footer = () => {
                                     </svg>
                                 </a>
                                 <a 
-                                    href="https://www.linkedin.com/company/esn-turkiye" 
+                                    href="https://www.linkedin.com/company/erasmusstudentnetwork-turkey/posts/?feedView=all" 
                                     target="_blank" 
                                     rel="noopener noreferrer"
                                     className="text-gray-600 hover:text-esn-dark-blue transition-colors"
@@ -73,7 +73,7 @@ const Footer = () => {
                                     </svg>
                                 </a>
                                 <a 
-                                    href="https://twitter.com/esnturkey" 
+                                    href="https://x.com/esnturkiye" 
                                     target="_blank" 
                                     rel="noopener noreferrer"
                                     className="text-gray-600 hover:text-esn-dark-blue transition-colors"
