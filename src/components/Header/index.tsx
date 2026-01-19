@@ -2,7 +2,7 @@ import MobileHeader from "./MobileHeader";
 import DesktopHeader from "./DesktopHeader";
 
 // Survey link - will be updated to https://www.limesurvey.org later
-export const SURVEY_URL = "https://esnturkey.org/";
+export const SURVEY_URL = "https://esnsurvey.limesurvey.net/174291?lang=en/";
 
 export interface NavigationLink {
     label: string;
@@ -37,10 +37,10 @@ const Header = () => {
     const navigationLinks: NavigationLink[] = [
         { label: "HOME", sectionId: "top" },
         { label: "Introduction", sectionId: "introduction" },
-        { label: "2025 Edition", sectionId: "report-2025" },
+        { label: "2024 Edition", sectionId: "report-2024" },
         { label: "The Team", sectionId: "team" },
         { label: "Testimonies", sectionId: "testimonies" },
-        { label: "Take Survey", sectionId: "survey", isButton: true },
+        { label: "Take the Survey", sectionId: "survey", isButton: true },
     ];
 
     // Desktop navigation structure (for dropdown menu)
@@ -50,11 +50,11 @@ const Header = () => {
         ],
         about: [
             { label: "Introduction", sectionId: "introduction" },
-            { label: "2025 Edition", sectionId: "report-2025" },
+            { label: "2024 Edition", sectionId: "report-2024" },
             { label: "The Team", sectionId: "team" },
             { label: "Testimonies", sectionId: "testimonies" },
         ],
-        survey: { label: "Take Survey", sectionId: "survey" },
+        survey: { label: "Take the Survey", sectionId: "survey" },
     };
 
     return (

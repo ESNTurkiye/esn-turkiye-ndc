@@ -35,6 +35,7 @@ const Hero = () => {
                 <p className="text-base sm:text-lg md:text-xl text-gray-100 mb-10 max-w-3xl mx-auto font-body font-light">
                     International students face increasing visa barriers. Currently we are identifying, analyzing
                     and reporting these obstacles to influence policy makers. <br />
+                    Project Timeline :  19.01.2026-19.02.2026 <br />
                     <span className="font-bold text-white">Your voice matters in this process.</span>
                 </p>
 
@@ -47,7 +48,7 @@ const Hero = () => {
                         aria-label="Share your visa experience story"
                     >
                         <span className="absolute inset-0 bg-white origin-center scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out"></span>
-                        <span className="relative z-10 text-white group-hover:text-esn-dark-blue transition-colors duration-300">Share Your Story</span>
+                        <span className="relative z-10 text-white group-hover:text-esn-dark-blue transition-colors duration-300">Take the Survey</span>
                     </a>
                     <button
                         onClick={() => {
@@ -63,7 +64,7 @@ const Hero = () => {
                         aria-label="Read the 2025 Barriers of Mobility report"
                     >
                         <span className="absolute inset-0 bg-white origin-center scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out"></span>
-                        <span className="relative z-10 group-hover:text-esn-dark-blue transition-colors duration-300">Read 2025 Report</span>
+                        <span className="relative z-10 group-hover:text-esn-dark-blue transition-colors duration-300">Read 2024 Report</span>
                     </button>
                 </div>
             </div>

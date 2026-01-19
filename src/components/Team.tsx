@@ -23,7 +23,7 @@ const teamMembers = [
           <div className="text-center mb-16">
             <span className="text-esn-dark-blue font-bold tracking-widest text-sm uppercase">Meet the People</span>
             <h2 className="text-4xl font-display font-bold text-gray-900 mt-2 uppercase">
-              Behind the <span className="text-esn-cyan">Project</span>
+              Behind the <span className="text-esn-cyan">Project: 25/26</span>
             </h2>
             <p className="mt-4 text-gray-600 max-w-2xl mx-auto font-body">
               The dedicated team from the National Development Committee working to identify and report mobility barriers.
