@@ -66,7 +66,7 @@ const ProjectInfo = () => {
 
                             <div className="relative z-10">
                                 <span className="bg-esn-magenta text-white text-xs font-bold px-3 py-1 mb-4 sm:mb-6 inline-block">LATEST PUBLICATION</span>
-                                <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold mb-4 sm:mb-6 uppercase text-gray-900">2025 Edition Report</h2>
+                                <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold mb-4 sm:mb-6 uppercase text-gray-900">2024 Edition Report</h2>
 
                                 <div className="space-y-4 mb-6 sm:mb-8">
                                     <p className="text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed">
