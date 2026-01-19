@@ -1,5 +1,5 @@
 // Survey link - will be updated to https://www.limesurvey.org later
-const SURVEY_URL = "https://esnturkey.org/";
+const SURVEY_URL = "https://esnsurvey.limesurvey.net/174291?lang=en/";
 
 const Hero = () => {
     return (
