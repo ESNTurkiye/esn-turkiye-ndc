@@ -48,6 +48,15 @@ const ProjectInfo = () => {
                             <p className="text-gray-600 font-body leading-relaxed text-base sm:text-lg">
                                 By collecting first hand experiences the survey examines the level of information and institutional support provided during visa processes the challenges faced in applications and approvals, processing times, rejection reasons and the overall impact of visa related issues on participants' motivation, satisfaction and programme experience. <strong className="text-gray-900">The survey aims to identify structural barriers within current mobility systems</strong> and provide evidence based insights to <strong className="text-gray-900">improve accessibility, fairness and inclusivity in international mobility for non-EU participants</strong>.
                             </p>
+                            <h3>
+                                <span className="text-esn-dark-blue font-bold">2026 Edition Overview</span>
+                            </h3>
+                            <p className="text-gray-600 font-body leading-relaxed text-base sm:text-lg">
+                               This year’s survey represents a fundamental redesign compared to the previous edition, shifting from a descriptive, experience-based questionnaire to a structured, policy-oriented data collection tool. While last year’s survey primarily documented whether participants faced visa difficulties and how they perceived the process, the new edition systematically analyses how visa and residence permit regimes influence access to mobility, decision-making, financial planning, wellbeing, and perceptions of equality. The scope has been significantly expanded to include full degree students alongside short-term mobility participants, allowing the survey to reflect real and diverse mobility pathways. The new structure captures the entire visa journey—from pre-application motivation and institutional guidance to appointment access, costs, processing times, outcomes, appeals, and post-arrival residence permit challenges—enabling the identification of concrete bottlenecks and institutional responsibilities. Greater emphasis is placed on the role and quality of support provided by sending institutions, host institutions, consulates, and visa centres, moving beyond simple satisfaction measures toward accountability. Additionally, the survey now explicitly measures the academic, financial, psychological, and equality-related impacts of visa procedures, transforming individual experiences into robust evidence of structural barriers. Overall, the new edition is designed not only to collect feedback, but to generate advocacy-ready data that can support systemic change at institutional, national, and European levels.
+                            </p>
+                            <p className="text-gray-600 font-body leading-relaxed text-base sm:text-lg">
+                               Target Group: Individuals who have taken part in mobility and volunteering programmes, such as Erasmus, International Degree programmes, ESC, and ESN events, in the 2025 Autumn semester or earlier.
+                            </p>
                         </div>
                     </div>
 
@@ -135,8 +144,8 @@ const ProjectInfo = () => {
                                 <PDFModal
                                     isOpen={isSurveyModalOpen}
                                     onClose={() => setIsSurveyModalOpen(false)}
-                                    title="Barriers of Mobility: Survey Report 2025"
-                                    pdfPath="/documents/survey-report-2025.pdf"
+                                    title="Barriers of Mobility: Survey Report 2024"
+                                    pdfPath="/documents/survey-report-2024.pdf"
                                 />
                             </div>
                         </div>
