@@ -1,10 +1,9 @@
 @import "tailwindcss";
 
-/* Kelson Sans Font Face - Eğer font dosyaları public/fonts klasöründe ise */
 @font-face {
     font-family: 'Kelson Sans';
-    src: url('/fonts/KelsonSans-Normal.woff2') format('woff2'),
-         url('/fonts/KelsonSans-Normal.woff') format('woff');
+    src: url('https://esnturkiye.github.io/esn-assets/fonts/KelsonSans/KelsonSans-Normal.woff2') format('woff2'),
+        url('https://esnturkiye.github.io/esn-assets/fonts/KelsonSans/KelsonSans-Normal.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -12,8 +11,8 @@
 
 @font-face {
     font-family: 'Kelson Sans';
-    src: url('/fonts/KelsonSans-Bold.woff2') format('woff2'),
-         url('/fonts/KelsonSans-Bold.woff') format('woff');
+    src: url('https://esnturkiye.github.io/esn-assets/fonts/KelsonSans/KelsonSans-Bold.woff2') format('woff2'),
+        url('https://esnturkiye.github.io/esn-assets/fonts/KelsonSans/KelsonSans-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -21,15 +20,14 @@
 
 @font-face {
     font-family: 'Kelson Sans';
-    src: url('/fonts/KelsonSans-Light.woff2') format('woff2'),
-         url('/fonts/KelsonSans-Light.woff') format('woff');
+    src:url('https://esnturkiye.github.io/esn-assets/fonts/KelsonSans/KelsonSans-Light.woff2') format('woff2'),
+        url('https://esnturkiye.github.io/esn-assets/fonts/KelsonSans/KelsonSans-Light.woff') format('woff');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
 }
 
 @theme {
-    /* ESN Renkleri - VIM Sayfa 9 */
     --color-esn-cyan: #00aeef;
     --color-esn-magenta: #ec008c;
     --color-esn-green: #7ac143;
@@ -45,7 +43,6 @@
     --color-esn-light-black: #000000;
     --color-esn-light-white: #ffffff;
 
-    /* ESN Fontları - VIM Sayfa 10 */
     --font-display: "Kelson Sans", "Lato", sans-serif;
     --font-body: "Kelson Sans", "Lato", sans-serif;
 }
@@ -66,7 +63,6 @@ h1, h2, h3, h4, h5, h6 {
     text-transform: uppercase;
 }
 
-/* Folded corner effect for paper-like appearance */
 .paper-fold {
     position: relative;
 }
@@ -98,7 +94,6 @@ h1, h2, h3, h4, h5, h6 {
     z-index: 2;
 }
 
-/* Responsive paper-fold sizes */
 @media (min-width: 640px) {
     .paper-fold::before {
         border-width: 0 50px 50px 0;

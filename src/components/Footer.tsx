@@ -6,7 +6,7 @@ const Footer = () => {
 
                     <div className="space-y-3 sm:space-y-4 md:space-y-4 lg:space-y-5">
                         <img
-                            src="/assets/images/logos/web-tr-colour-black.png"
+                            src="https://esnturkiye.github.io/esn-assets/images/logos/web-tr-colour-black.png"
                             alt="ESN Türkiye - Erasmus Student Network Türkiye Logo"
                             className="h-14 sm:h-12 md:h-14 lg:h-16 w-auto object-contain"
                             width="auto"
@@ -85,10 +85,18 @@ const Footer = () => {
                                 </a>
                             </div>
                         </div>
-                        <div className="pt-3 sm:pt-4 md:pt-4 border-t border-gray-300">
+                        <div className="pt-3 sm:pt-4 md:pt-4 border-t border-gray-300 space-y-2">
                             <p className="text-gray-600 text-xs sm:text-xs md:text-sm leading-relaxed">
                                 We've taken extra care to reach high accessibility standards. If you have any comment, please let us know.
                             </p>
+                            <div>
+                                <h6 className="text-gray-900 font-display uppercase tracking-wide mb-1 text-[10px] sm:text-[10px] md:text-xs">
+                                    Privacy &amp; Analytics
+                                </h6>
+                                <p className="text-gray-600 text-[10px] sm:text-[10px] md:text-xs leading-relaxed">
+                                    This website uses Google Analytics 4 to collect anonymous, aggregated usage statistics that help us understand how the Barriers of Mobility project is accessed and improve student mobility advocacy. No personally identifiable information is collected, and data is processed in line with ESN Türkiye&apos;s privacy commitments.
+                                </p>
+                            </div>
                         </div>
                     </div>
 

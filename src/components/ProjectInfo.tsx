@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import PDFModal from './PDFModal';
+import { useAnalytics } from '../hooks/useAnalytics';
 
-// Mobil cihaz kontrolü
 const isMobileDevice = () => {
     if (typeof window === 'undefined') return false;
     return window.innerWidth < 640 || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
@@ -12,20 +12,27 @@ const openPDF = (pdfPath: string) => {
 };
 
 const ProjectInfo = () => {
+    const { trackDocumentAction, trackButtonClick } = useAnalytics();
     const [isPolicyModalOpen, setIsPolicyModalOpen] = useState(false);
     const [isSurveyModalOpen, setIsSurveyModalOpen] = useState(false);
 
     const handlePolicyClick = () => {
+        trackDocumentAction("view", "policy-paper-2025.pdf");
+        trackButtonClick("view_policy_paper", "project_info_section");
+
         if (isMobileDevice()) {
-            openPDF('/documents/policy-paper-2025.pdf');
+            openPDF("/documents/policy-paper-2025.pdf");
         } else {
             setIsPolicyModalOpen(true);
         }
     };
 
     const handleSurveyClick = () => {
+        trackDocumentAction("view", "survey-report-2024.pdf");
+        trackButtonClick("view_survey_report", "project_info_section");
+
         if (isMobileDevice()) {
-            openPDF('/documents/survey-report-2025.pdf');
+            openPDF("/documents/survey-report-2025.pdf");
         } else {
             setIsSurveyModalOpen(true);
         }
@@ -43,7 +50,7 @@ const ProjectInfo = () => {
                         </h2>
                         <div className="space-y-6">
                             <p className="text-gray-600 font-body leading-relaxed text-base sm:text-lg">
-                                The <strong className="text-gray-900">"Barriers of Mobility: Visa Issues for Non-EU Students"</strong> survey focuses on understanding how visa and residence permit procedures affect the mobility experiences of <strong className="text-gray-900">non-EU students and young people participating in international programmes</strong> such as Erasmus+ the European Solidarity Corps (ESC), ESN events and other mobility opportunities.
+                                The <strong className="text-gray-900">"Barriers of Mobility: Visa Issues for Non-EU Students"</strong> survey focuses on understanding how visa and residence permit procedures affect the mobility experiences of <strong className="text-gray-900">non-EU students and young people participating in international programmes</strong> such as Erasmus+ the European Solidarity Corps (ESC), ESN events and other mobility opportunities, with particular attention to <strong className="text-gray-900">non-EU student mobility</strong> across Europe.
                             </p>
                             <p className="text-gray-600 font-body leading-relaxed text-base sm:text-lg">
                                 By collecting first hand experiences the survey examines the level of information and institutional support provided during visa processes the challenges faced in applications and approvals, processing times, rejection reasons and the overall impact of visa related issues on participants' motivation, satisfaction and programme experience. <strong className="text-gray-900">The survey aims to identify structural barriers within current mobility systems</strong> and provide evidence based insights to <strong className="text-gray-900">improve accessibility, fairness and inclusivity in international mobility for non-EU participants</strong>.
@@ -52,11 +59,12 @@ const ProjectInfo = () => {
                                 <span className="text-esn-dark-blue font-bold">2026 Edition Overview</span>
                             </h3>
                             <p className="text-gray-600 font-body leading-relaxed text-base sm:text-lg">
-                               This year’s survey represents a fundamental redesign compared to the previous edition, shifting from a descriptive, experience-based questionnaire to a structured, policy-oriented data collection tool. While last year’s survey primarily documented whether participants faced visa difficulties and how they perceived the process, the new edition systematically analyses how visa and residence permit regimes influence access to mobility, decision-making, financial planning, wellbeing, and perceptions of equality. The scope has been significantly expanded to include full degree students alongside short-term mobility participants, allowing the survey to reflect real and diverse mobility pathways. The new structure captures the entire visa journey—from pre-application motivation and institutional guidance to appointment access, costs, processing times, outcomes, appeals, and post-arrival residence permit challenges—enabling the identification of concrete bottlenecks and institutional responsibilities. Greater emphasis is placed on the role and quality of support provided by sending institutions, host institutions, consulates, and visa centres, moving beyond simple satisfaction measures toward accountability. Additionally, the survey now explicitly measures the academic, financial, psychological, and equality-related impacts of visa procedures, transforming individual experiences into robust evidence of structural barriers. Overall, the new edition is designed not only to collect feedback, but to generate advocacy-ready data that can support systemic change at institutional, national, and European levels.
+                               This year’s survey represents a fundamental redesign compared to the previous edition, shifting from a descriptive, experience-based questionnaire to a structured, policy-oriented data collection tool. While last year’s survey primarily documented whether participants faced visa difficulties and how they perceived the process, the new edition systematically analyses how visa and residence permit regimes influence access to mobility, decision-making, financial planning, wellbeing, and perceptions of equality. The scope has been significantly expanded to include full degree students alongside short-term mobility participants, allowing the survey to reflect real and diverse mobility pathways. The new structure captures the entire visa journey—from pre-application motivation and institutional guidance to appointment access, visa appointment delays, costs, processing times, outcomes, appeals, and post-arrival residence permit challenges and residence permit bottlenecks—enabling the identification of concrete bottlenecks and institutional responsibilities. Greater emphasis is placed on the role and quality of support provided by sending institutions, host institutions, consulates, and visa centres, moving beyond simple satisfaction measures toward accountability. Additionally, the survey now explicitly measures the academic, financial, psychological, and equality-related impacts of visa procedures, transforming individual experiences into robust evidence of structural barriers. Overall, the new edition is designed not only to collect feedback, but to generate advocacy-ready data that can support systemic change at institutional, national, and European levels.
                             </p>
-                            <p className="text-gray-600 font-body leading-relaxed text-base sm:text-lg">
-                               Target Group: Individuals who have taken part in mobility and volunteering programmes, such as Erasmus, International Degree programmes, ESC, and ESN events, in the 2025 Autumn semester or earlier.
-                            </p>
+                            <div className="flex items-center gap-3 text-sm text-gray-500 italic">
+                                <svg className="w-5 h-5 text-esn-magenta" fill="currentColor" viewBox="0 0 20 20"><path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a7 7 0 017 7v1H1v-1a7 7 0 017-7z" /></svg>
+                                <span>Target: Participants of Erasmus+, ESC, and ESN events (Autumn 2025 or earlier).</span>
+                            </div>
                         </div>
                     </div>
 
@@ -65,8 +73,12 @@ const ProjectInfo = () => {
                             <div className="absolute top-0 right-0 w-48 h-48 bg-esn-dark-blue/5 rounded-full blur-3xl -z-10"></div>
 
                             <div className="relative z-10">
-                                <span className="bg-esn-magenta text-white text-xs font-bold px-3 py-1 mb-4 sm:mb-6 inline-block">LATEST PUBLICATION</span>
-                                <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold mb-4 sm:mb-6 uppercase text-gray-900">2024 Edition Report</h2>
+                                <span className="bg-esn-magenta text-white text-[10px] sm:text-xs font-bold px-3 py-1 mb-4 inline-block rounded-full">
+                                    INSIGHTS & REPORTS
+                                </span>
+                                <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold mb-4 uppercase text-gray-900">
+                                    Evidence-Based Research on <span className="text-esn-dark-blue">Student Visa Barriers</span>
+                                </h2>
 
                                 <div className="space-y-4 mb-6 sm:mb-8">
                                     <p className="text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed">
