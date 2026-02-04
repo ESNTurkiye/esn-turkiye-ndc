@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://barriersofmobility.esnturkiye.org/sitemap.xml

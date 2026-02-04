@@ -1,8 +1,6 @@
 import MobileHeader from "./MobileHeader";
 import DesktopHeader from "./DesktopHeader";
-
-// Survey link - will be updated to https://www.limesurvey.org later
-export const SURVEY_URL = "https://esnsurvey.limesurvey.net/174291?lang=en/";
+import { SURVEY_URL } from "@/config/constants";
 
 export interface NavigationLink {
     label: string;

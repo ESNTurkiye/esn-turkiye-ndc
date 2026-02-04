@@ -1,7 +1,28 @@
-// Survey link - will be updated to https://www.limesurvey.org later
-const SURVEY_URL = "https://esnsurvey.limesurvey.net/174291?lang=en/";
+import { SURVEY_URL } from "@/config/constants";
+import { useAnalytics } from "@/hooks/useAnalytics";
 
 const Hero = () => {
+    const { trackButtonClick } = useAnalytics();
+
+    const handleTakeSurveyClick = () => {
+        trackButtonClick("take_survey", "hero");
+    };
+
+    const handleReadReportClick = () => {
+        trackButtonClick("read_report_scroll", "hero");
+
+        const element =
+            document.getElementById("report-2025") ||
+            document.querySelector<HTMLElement>("section:nth-of-type(2)");
+        if (element) {
+            const headerOffset = 100;
+            const elementPosition = element.getBoundingClientRect().top;
+            const offsetPosition =
+                elementPosition + window.pageYOffset - headerOffset;
+            window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+        }
+    };
+
     return (
         <section id="top" className="relative min-h-[90vh] flex items-center justify-center bg-esn-dark-blue pt-20 overflow-hidden">
             <div className="absolute inset-0 w-full h-full z-0">
@@ -44,6 +65,7 @@ const Hero = () => {
                         href={SURVEY_URL}
                         target="_blank"
                         rel="noopener noreferrer"
+                        onClick={handleTakeSurveyClick}
                         className="relative px-8 py-4 rounded-lg font-bold tracking-wide shadow-lg shadow-esn-light-blue/25 hover:shadow-xl hover:shadow-esn-light-blue/30 transition-shadow duration-300 uppercase overflow-hidden group bg-esn-light-blue inline-block text-center"
                         aria-label="Share your visa experience story"
                     >
@@ -51,15 +73,7 @@ const Hero = () => {
                         <span className="relative z-10 text-white group-hover:text-esn-dark-blue transition-colors duration-300">Take the Survey</span>
                     </a>
                     <button
-                        onClick={() => {
-                            const element = document.getElementById('report-2025');
-                            if (element) {
-                                const headerOffset = 100;
-                                const elementPosition = element.getBoundingClientRect().top;
-                                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-                                window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
-                            }
-                        }}
+                        onClick={handleReadReportClick}
                         className="relative px-8 py-4 bg-transparent text-white border-2 border-white rounded-lg font-bold tracking-wide shadow-md shadow-white/10 hover:shadow-lg hover:shadow-white/20 transition-shadow duration-300 uppercase overflow-hidden group"
                         aria-label="Read the 2025 Barriers of Mobility report"
                     >

@@ -4,10 +4,12 @@ import ProjectInfo from "@/components/ProjectInfo";
 import Testimonies from "@/components/Testimonies";
 import Team from "@/components/Team";
 import Footer from "@/components/Footer";
+import DocumentHead from "@/components/DocumentHead";
 
 export default function App() {
     return (
         <div className="min-h-screen flex flex-col">
+            <DocumentHead />
             <Header />
             <main className="grow">
                 <Hero />

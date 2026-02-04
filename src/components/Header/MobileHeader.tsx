@@ -1,6 +1,6 @@
 import { useState } from "react";
 import type { NavigationLink } from "./index";
-import { SURVEY_URL } from "./index";
+import { SURVEY_URL } from "@/config/constants";
 
 interface MobileHeaderProps {
     navigationLinks: NavigationLink[];
@@ -36,7 +36,7 @@ const MobileHeader = ({ navigationLinks, scrollToSection }: MobileHeaderProps) =
                 >
                     <img
                         src="/assets/images/logos/web-TR-colour-white.png"
-                        alt="ESN Türkiye Logo"
+                        alt="ESN Türkiye Official Logo - International Student Support"
                         className="h-14 w-auto object-contain"
                     />
                     <div className="flex flex-col leading-tight">

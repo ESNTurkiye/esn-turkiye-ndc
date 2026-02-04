@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { createPortal } from 'react-dom';
+import { useAnalytics } from '../hooks/useAnalytics';
 
 interface PDFModalProps {
     isOpen: boolean;
@@ -9,6 +10,9 @@ interface PDFModalProps {
 }
 
 const PDFModal = ({ isOpen, onClose, title, pdfPath }: PDFModalProps) => {
+    const { trackDocumentAction } = useAnalytics();
+    const fileName = pdfPath.split('/').pop() ?? '';
+
     useEffect(() => {
         if (isOpen) {
             document.body.style.overflow = 'hidden';
@@ -45,6 +49,7 @@ const PDFModal = ({ isOpen, onClose, title, pdfPath }: PDFModalProps) => {
                     <a
                         href={pdfPath}
                         download
+                        onClick={() => trackDocumentAction('download', fileName)}
                         className="text-esn-dark-blue hover:text-blue-900 active:text-blue-800 font-bold text-xs sm:text-sm uppercase flex items-center justify-center gap-2 transition py-2 px-3 rounded-lg hover:bg-gray-100 active:bg-gray-200 touch-manipulation"
                     >
                         <svg className="w-4 h-4 sm:w-4 sm:h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
