@@ -34,10 +34,10 @@ const Hero = () => {
                 />
             </div>
 
-            <div className="absolute inset-0 bg-gradient-to-b from-esn-dark-blue/70 via-esn-dark-blue/50 to-esn-dark-blue/60 z-[1]"></div>
+            <div className="absolute inset-0 bg-linear-to-b from-esn-dark-blue/70 via-esn-dark-blue/50 to-esn-dark-blue/60 z-1"></div>
 
-            <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-esn-cyan/10 rounded-full blur-[100px] z-[2]"></div>
-            <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-esn-light-blue/10 rounded-full blur-[120px] z-[2]"></div>
+            <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-esn-cyan/10 rounded-full blur-[100px] z-2"></div>
+            <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-esn-light-blue/10 rounded-full blur-[120px] z-2"></div>
 
             <div className="container mx-auto px-4 text-center relative z-10">
 
@@ -45,7 +45,7 @@ const Hero = () => {
                     Research Project by ESN Türkiye
                 </span>
 
-                <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-4 sm:mb-6 leading-[1.2] sm:leading-tight uppercase break-words px-2">
+                <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-4 sm:mb-6 leading-[1.2] sm:leading-tight uppercase wrap-break-word px-2">
                     <span>Mobility is a Right</span>
                     <br className="hidden sm:block" />
                     <span className="text-esn-cyan block sm:inline">

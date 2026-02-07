@@ -35,7 +35,7 @@ const MobileHeader = ({ navigationLinks, scrollToSection }: MobileHeaderProps) =
                     className="flex items-center gap-2 hover:opacity-90 transition-opacity"
                 >
                     <img
-                        src="/assets/images/logos/web-TR-colour-white.png"
+                        src="https://esnturkiye.github.io/esn-assets/images/logos/web-TR-colour-white.png"
                         alt="ESN Türkiye Official Logo - International Student Support"
                         className="h-14 w-auto object-contain"
                     />
