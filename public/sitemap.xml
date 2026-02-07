@@ -1,9 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Main Page -->
   <url>
-    <loc>https://barriersofmobility.esnturkiye.org/</loc>
-    <lastmod>2026-02-04</lastmod>
+    <loc>https://barriersofmobility.esnturkey.org/</loc>
+    <lastmod>2026-02-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+
+  <!-- Policy Paper PDF -->
+  <url>
+    <loc>https://barriersofmobility.esnturkey.org/documents/policy-paper-2025.pdf</loc>
+    <lastmod>2025-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Survey Report 2025 PDF -->
+  <url>
+    <loc>https://barriersofmobility.esnturkey.org/documents/survey-report-2025.pdf</loc>
+    <lastmod>2025-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Survey Report 2024 PDF -->
+  <url>
+    <loc>https://barriersofmobility.esnturkey.org/documents/survey-report-2024.pdf</loc>
+    <lastmod>2024-04-05</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>

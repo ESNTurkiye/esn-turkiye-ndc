@@ -1,13 +1,16 @@
 import { useState } from "react";
 import type { NavigationLink } from "./index";
-import { SURVEY_URL } from "@/config/constants";
+import { SURVEY_URL } from "@/config";
 
 interface MobileHeaderProps {
     navigationLinks: NavigationLink[];
     scrollToSection: (sectionId: string) => void;
 }
 
-const MobileHeader = ({ navigationLinks, scrollToSection }: MobileHeaderProps) => {
+const MobileHeader = ({
+    navigationLinks,
+    scrollToSection,
+}: MobileHeaderProps) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const toggleMenu = () => {
@@ -16,8 +19,8 @@ const MobileHeader = ({ navigationLinks, scrollToSection }: MobileHeaderProps) =
 
     const onLinkClick = (sectionId: string) => {
         setIsMenuOpen(false);
-        if (sectionId === 'survey') {
-            window.open(SURVEY_URL, '_blank', 'noopener,noreferrer');
+        if (sectionId === "survey") {
+            window.open(SURVEY_URL, "_blank", "noopener,noreferrer");
             return;
         }
         scrollToSection(sectionId);
@@ -30,19 +33,25 @@ const MobileHeader = ({ navigationLinks, scrollToSection }: MobileHeaderProps) =
                     href="#"
                     onClick={(e) => {
                         e.preventDefault();
-                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                        window.scrollTo({ top: 0, behavior: "smooth" });
                     }}
                     className="flex items-center gap-2 hover:opacity-90 transition-opacity"
                 >
                     <img
-                        src="/assets/images/logos/web-TR-colour-white.png"
+                        src="https://esnturkiye.github.io/esn-assets/images/logos/web-TR-colour-white.png"
                         alt="ESN Türkiye Official Logo - International Student Support"
                         className="h-14 w-auto object-contain"
                     />
                     <div className="flex flex-col leading-tight">
-                        <span className="text-white font-display font-bold tracking-wide text-xs">BARRIERS OF</span>
-                        <span className="text-white font-display font-bold tracking-wide text-xs">MOBILITY</span>
-                        <span className="text-white/80 font-body text-[9px] font-normal tracking-normal mt-0.5">Research Project by ESN</span>
+                        <span className="text-white font-display font-bold tracking-wide text-xs">
+                            BARRIERS OF
+                        </span>
+                        <span className="text-white font-display font-bold tracking-wide text-xs">
+                            MOBILITY
+                        </span>
+                        <span className="text-white/80 font-body text-[9px] font-normal tracking-normal mt-0.5">
+                            Research Project by ESN
+                        </span>
                     </div>
                 </a>
 
@@ -54,12 +63,32 @@ const MobileHeader = ({ navigationLinks, scrollToSection }: MobileHeaderProps) =
                     aria-controls="mobile-navigation"
                 >
                     {isMenuOpen ? (
-                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                        <svg
+                            className="w-6 h-6"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                        >
+                            <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M6 18L18 6M6 6l12 12"
+                            />
                         </svg>
                     ) : (
-                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                        <svg
+                            className="w-6 h-6"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                        >
+                            <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M4 6h16M4 12h16M4 18h16"
+                            />
                         </svg>
                     )}
                 </button>
@@ -101,4 +130,3 @@ const MobileHeader = ({ navigationLinks, scrollToSection }: MobileHeaderProps) =
 };
 
 export default MobileHeader;
-

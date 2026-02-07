@@ -1,4 +1,19 @@
+# Allow all crawlers
 User-agent: *
 Disallow:
 
-Sitemap: https://barriersofmobility.esnturkiye.org/sitemap.xml
+# Specific rules for major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Sitemap location
+Sitemap: https://barriersofmobility.esnturkey.org/sitemap.xml
+
+# Crawl-delay (optional - removes if causing issues)
+# Crawl-delay: 1
