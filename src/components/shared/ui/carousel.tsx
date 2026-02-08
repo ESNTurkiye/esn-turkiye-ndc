@@ -198,7 +198,6 @@ const CarouselNext = React.forwardRef<
 });
 CarouselNext.displayName = "CarouselNext";
 
-/* eslint-disable react-refresh/only-export-components -- hook and type are part of the carousel API */
 export {
     type CarouselApi,
     Carousel,

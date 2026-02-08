@@ -1,69 +1,82 @@
+import { useNavigate, useLocation } from "react-router-dom";
 import MobileHeader from "./MobileHeader.tsx";
 import DesktopHeader from "./DesktopHeader.tsx";
 import { SURVEY_URL } from "@/config";
+import type { NavItem } from "@/config/navigation";
+import {
+    NAV_MAIN,
+    NAV_ABOUT,
+    NAV_SURVEY,
+    getMobileNavItems,
+    getNavItemKey,
+} from "@/config/navigation";
 
-export interface NavigationLink {
-    label: string;
-    sectionId: string;
-    isButton?: boolean;
+const HEADER_OFFSET = 100;
+
+function scrollToSection(sectionId: string) {
+    const element = document.getElementById(sectionId);
+    if (element) {
+        const headerOffset = window.innerWidth >= 768 ? HEADER_OFFSET : 80;
+        const top =
+            element.getBoundingClientRect().top + window.scrollY - headerOffset;
+        window.scrollTo({ top, behavior: "smooth" });
+    }
 }
 
 const Header = () => {
-    const scrollToSection = (sectionId: string) => {
-        if (sectionId === "top" || sectionId === "home") {
-            window.scrollTo({ top: 0, behavior: "smooth" });
-            return;
-        }
-        if (sectionId === "survey") {
-            window.open(SURVEY_URL, "_blank", "noopener,noreferrer");
-            return;
-        }
-        const element = document.getElementById(sectionId);
-        if (element) {
-            const headerOffset = window.innerWidth >= 768 ? 100 : 80;
-            const elementPosition = element.getBoundingClientRect().top;
-            const offsetPosition =
-                elementPosition + window.pageYOffset - headerOffset;
+    const navigate = useNavigate();
+    const location = useLocation();
+    const pathname = location.pathname;
+    const isHome = pathname === "/";
 
-            window.scrollTo({
-                top: offsetPosition,
-                behavior: "smooth",
-            });
+    const handleNav = (item: NavItem) => {
+        switch (item.type) {
+            case "home":
+                if (!isHome) navigate("/");
+                else window.scrollTo({ top: 0, behavior: "smooth" });
+                break;
+            case "route":
+                navigate(item.path);
+                break;
+            case "section":
+                if (isHome) {
+                    scrollToSection(item.sectionId);
+                } else {
+                    navigate(`/#${item.sectionId}`, { replace: false });
+                }
+                break;
+            case "external":
+                window.open(item.url, "_blank", "noopener,noreferrer");
+                break;
+            default:
+                break;
         }
     };
 
-    const navigationLinks: NavigationLink[] = [
-        { label: "HOME", sectionId: "top" },
-        { label: "Introduction", sectionId: "introduction" },
-        { label: "2024 Edition", sectionId: "report-2024" },
-        { label: "The Team", sectionId: "team" },
-        { label: "Testimonies", sectionId: "testimonies" },
-        { label: "Take the Survey", sectionId: "survey", isButton: true },
-    ];
-
-    const desktopNavigation = {
-        main: [{ label: "HOME", sectionId: "top" }],
-        about: [
-            { label: "Introduction", sectionId: "introduction" },
-            { label: "2024 Edition", sectionId: "report-2024" },
-            { label: "The Team", sectionId: "team" },
-            { label: "Testimonies", sectionId: "testimonies" },
-        ],
-        survey: { label: "Take the Survey", sectionId: "survey" },
+    const desktopSurveyItem: NavItem = {
+        type: "external",
+        label: NAV_SURVEY.label,
+        url: SURVEY_URL,
     };
+    const mobileNavItems = getMobileNavItems(SURVEY_URL);
 
     return (
         <>
             <MobileHeader
-                navigationLinks={navigationLinks}
-                scrollToSection={scrollToSection}
+                navItems={mobileNavItems}
+                onNav={handleNav}
+                getNavItemKey={getNavItemKey}
             />
             <DesktopHeader
-                scrollToSection={scrollToSection}
-                navigationLinks={desktopNavigation}
+                mainItems={NAV_MAIN}
+                aboutItems={NAV_ABOUT}
+                surveyItem={desktopSurveyItem}
+                onNav={handleNav}
+                getNavItemKey={getNavItemKey}
             />
         </>
     );
 };
 
 export default Header;
+export type { NavItem };

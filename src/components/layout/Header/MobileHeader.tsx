@@ -1,39 +1,32 @@
 import { useState } from "react";
-import type { NavigationLink } from "./index";
-import { SURVEY_URL } from "@/config";
+import type { NavItem } from "@/config/navigation";
 
 interface MobileHeaderProps {
-    navigationLinks: NavigationLink[];
-    scrollToSection: (sectionId: string) => void;
+    navItems: NavItem[];
+    onNav: (item: NavItem) => void;
+    getNavItemKey: (item: NavItem) => string;
 }
 
 const MobileHeader = ({
-    navigationLinks,
-    scrollToSection,
+    navItems,
+    onNav,
+    getNavItemKey,
 }: MobileHeaderProps) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-    const toggleMenu = () => {
-        setIsMenuOpen(!isMenuOpen);
-    };
-
-    const onLinkClick = (sectionId: string) => {
+    const handleClick = (item: NavItem) => {
         setIsMenuOpen(false);
-        if (sectionId === "survey") {
-            window.open(SURVEY_URL, "_blank", "noopener,noreferrer");
-            return;
-        }
-        scrollToSection(sectionId);
+        onNav(item);
     };
 
     return (
         <header className="fixed w-full bg-esn-dark-blue shadow-md shadow-esn-dark-blue/20 z-50 border-b border-esn-dark-blue/20 md:hidden">
             <div className="container mx-auto px-4 py-2 flex justify-between items-center">
                 <a
-                    href="#"
+                    href="/"
                     onClick={(e) => {
                         e.preventDefault();
-                        window.scrollTo({ top: 0, behavior: "smooth" });
+                        onNav({ type: "home", label: "HOME" });
                     }}
                     className="flex items-center gap-2 hover:opacity-90 transition-opacity"
                 >
@@ -56,8 +49,9 @@ const MobileHeader = ({
                 </a>
 
                 <button
+                    type="button"
                     className="text-white p-1"
-                    onClick={toggleMenu}
+                    onClick={() => setIsMenuOpen(!isMenuOpen)}
                     aria-label="Toggle navigation menu"
                     aria-expanded={isMenuOpen}
                     aria-controls="mobile-navigation"
@@ -96,28 +90,31 @@ const MobileHeader = ({
 
             <div
                 id="mobile-navigation"
-                className={`absolute top-full left-0 w-full bg-white shadow-xl shadow-esn-dark-blue/15 border-b border-gray-100 transition-all duration-300 ease-in-out ${isMenuOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0 overflow-hidden"
-                    }`}
+                className={`absolute top-full left-0 w-full bg-white shadow-xl shadow-esn-dark-blue/15 border-b border-gray-100 transition-all duration-300 ease-in-out ${
+                    isMenuOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0 overflow-hidden"
+                }`}
             >
                 <nav className="container mx-auto px-4 py-4" aria-label="Mobile navigation">
                     <ul className="flex flex-col space-y-4" role="list">
-                        {navigationLinks.map((link) => (
-                            <li key={link.sectionId}>
-                                {link.isButton ? (
+                        {navItems.map((item) => (
+                            <li key={getNavItemKey(item)}>
+                                {item.type === "external" ? (
                                     <button
-                                        onClick={() => onLinkClick(link.sectionId)}
+                                        type="button"
+                                        onClick={() => handleClick(item)}
                                         className="bg-esn-dark-blue text-white px-6 py-3 rounded-full hover:bg-blue-900 transition shadow-md shadow-esn-dark-blue/25 hover:shadow-lg hover:shadow-esn-dark-blue/35 w-full font-body font-bold text-sm tracking-wider"
-                                        aria-label={`Navigate to ${link.label} section`}
+                                        aria-label={`Navigate to ${item.label}`}
                                     >
-                                        {link.label.toUpperCase()}
+                                        {item.label.toUpperCase()}
                                     </button>
                                 ) : (
                                     <button
-                                        onClick={() => onLinkClick(link.sectionId)}
+                                        type="button"
+                                        onClick={() => handleClick(item)}
                                         className="text-gray-700 font-body font-bold text-sm tracking-wider py-2 block w-full text-left hover:text-esn-cyan transition-colors"
-                                        aria-label={`Navigate to ${link.label} section`}
+                                        aria-label={`Navigate to ${item.label}`}
                                     >
-                                        {link.label}
+                                        {item.label}
                                     </button>
                                 )}
                             </li>

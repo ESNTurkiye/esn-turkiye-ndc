@@ -1,3 +1,76 @@
+import { useEffect } from "react";
+
+export interface BlogSEOOptions {
+    title: string;
+    description: string;
+}
+
+interface BlogPostMeta {
+    title?: string;
+    description?: string;
+    [key: string]: unknown;
+}
+
+function setMeta(name: string, content: string, attribute: "name" | "property" = "name") {
+    let el = document.querySelector(`meta[${attribute}="${name}"]`);
+    if (!el) {
+        el = document.createElement("meta");
+        el.setAttribute(attribute, name);
+        document.head.appendChild(el);
+    }
+    el.setAttribute("content", content);
+}
+
+export function useBlogSEO(options: BlogSEOOptions) {
+    useEffect(() => {
+        const title = `${options.title} | ${SEO.title}`;
+        document.title = title;
+        setMeta("title", title);
+        setMeta("description", options.description);
+        setMeta("og:title", title, "property");
+        setMeta("og:description", options.description, "property");
+        setMeta("twitter:title", title);
+        setMeta("twitter:description", options.description);
+        return () => {
+            document.title = SEO.title;
+            setMeta("title", SEO.title);
+            setMeta("description", SEO.description);
+            setMeta("og:title", SEO.title, "property");
+            setMeta("og:description", SEO.description, "property");
+            setMeta("twitter:title", SEO.title);
+            setMeta("twitter:description", SEO.description);
+        };
+    }, [options.title, options.description]);
+}
+
+export function useBlogPostSEO(post: { metadata: BlogPostMeta } | null) {
+    useEffect(() => {
+        if (post?.metadata) {
+            const title = (post.metadata.title ?? "Blog post") + " | " + SEO.title;
+            const description = post.metadata.description ?? SEO.description;
+            document.title = title;
+            setMeta("title", title);
+            setMeta("description", description);
+            setMeta("og:title", title, "property");
+            setMeta("og:description", description, "property");
+            setMeta("twitter:title", title);
+            setMeta("twitter:description", description);
+        } else {
+            document.title = "Post not found | " + SEO.title;
+            setMeta("description", SEO.description);
+        }
+        return () => {
+            document.title = SEO.title;
+            setMeta("title", SEO.title);
+            setMeta("description", SEO.description);
+            setMeta("og:title", SEO.title, "property");
+            setMeta("og:description", SEO.description, "property");
+            setMeta("twitter:title", SEO.title);
+            setMeta("twitter:description", SEO.description);
+        };
+    }, [post]);
+}
+
 export const SEO = {
     title: "Barriers of Mobility | Visa Issues for Non-EU Students - ESN Türkiye",
     description:

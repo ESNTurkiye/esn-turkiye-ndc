@@ -1,21 +1,21 @@
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
-import Hero from "@/components/sections/Hero";
-import ProjectInfo from "@/components/sections/ProjectInfo";
-import Team from "@/components/sections/Team";
-import Testimonies from "@/components/sections/Testimonies";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ScrollToTop from "@/components/ScrollToTop";
+import Layout from "@/components/layout/Layout";
+import HomePage from "@/pages/HomePage";
+import BlogList from "@/pages/Blog/BlogList";
+import BlogDetail from "@/pages/Blog/BlogDetail";
 
 export default function App() {
-  return (
-    <div className="min-h-screen flex flex-col">
-        <Header />
-        <main className="grow">
-          <Hero />
-          <ProjectInfo />
-          <Team />
-          <Testimonies />
-        </main>
-        <Footer />
-    </div>
-  );
+    return (
+        <BrowserRouter>
+            <ScrollToTop />
+            <Routes>
+                <Route path="/" element={<Layout />}>
+                    <Route index element={<HomePage />} />
+                    <Route path="blog" element={<BlogList />} />
+                    <Route path="blog/:slug" element={<BlogDetail />} />
+                </Route>
+            </Routes>
+        </BrowserRouter>
+    );
 }
