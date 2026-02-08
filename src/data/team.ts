@@ -5,10 +5,10 @@ export type TeamMember = {
 };
 
 export const previousEditionTeam: TeamMember[] = [
-    { name: "Gökay Bağrıyanık", role: "President 23/24", image: "https://esnturkiye.github.io/esn-assets/images/team/13d8e6b6-0556-4581-b988-91dbbf57f255.jpeg" },
-    { name: "Merve Ceylan", role: "President 24/25", image: "https://esnturkiye.github.io/esn-assets/images/team/c5769190-3852-42da-bcb0-265c35ef97c5.jpeg" },
+    { name: "Gökay Bağrıyanık", role: "esn türkiye president 23/24", image: "https://esnturkiye.github.io/esn-assets/images/team/13d8e6b6-0556-4581-b988-91dbbf57f255.jpeg" },
+    { name: "Merve Ceylan", role: "esn türkiye President 24/25", image: "https://esnturkiye.github.io/esn-assets/images/team/c5769190-3852-42da-bcb0-265c35ef97c5.jpeg" },
     { name: "Berker Özer", role: "Survey Team Vice Chair 23/24", image: "https://esnturkiye.github.io/esn-assets/images/team/cf8a38c6-3bd3-4436-b50f-9eafa93d2b29.jpeg" },
-    { name: "Hazal Pınar", role: "Survey Team Vice Chair 24/25", image: "https://esnturkiye.github.io/esn-assets/images/team/51d3bf97-d0ae-4e0a-8cea-32d1a5a38cdd.jpeg" },
+    { name: "Hazal Pınar", role: "Education Officer 24/25", image: "https://esnturkiye.github.io/esn-assets/images/team/51d3bf97-d0ae-4e0a-8cea-32d1a5a38cdd.jpeg" },
 ];
 
 export const currentTeam: TeamMember[] = [

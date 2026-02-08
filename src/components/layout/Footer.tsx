@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Footer = () => {
     return (
         <footer className="bg-gray-100 text-gray-800 pt-6 sm:pt-8 md:pt-10 lg:pt-12 font-body text-sm leading-relaxed">
@@ -42,6 +44,12 @@ const Footer = () => {
                                 Barriers of Mobility is a research project managed by the
                                 National Development Committee (NDC) of ESN Türkiye.
                             </p>
+                            <Link
+                                to="/blog"
+                                className="mt-3 inline-block text-esn-dark-blue hover:underline text-xs sm:text-xs md:text-sm"
+                            >
+                                Blog
+                            </Link>
                         </div>
                     </div>
 

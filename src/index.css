@@ -20,7 +20,7 @@
 
 @font-face {
     font-family: 'Kelson Sans';
-    src:url('https://esnturkiye.github.io/esn-assets/fonts/KelsonSans/KelsonSans-Light.woff2') format('woff2'),
+    src: url('https://esnturkiye.github.io/esn-assets/fonts/KelsonSans/KelsonSans-Light.woff2') format('woff2'),
         url('https://esnturkiye.github.io/esn-assets/fonts/KelsonSans/KelsonSans-Light.woff') format('woff');
     font-weight: 300;
     font-style: normal;
@@ -58,7 +58,12 @@ body {
     padding: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: "Kelson Sans", "Lato", sans-serif;
     text-transform: uppercase;
 }
@@ -99,7 +104,7 @@ h1, h2, h3, h4, h5, h6 {
         border-width: 0 50px 50px 0;
         box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.15), inset -1px 1px 2px rgba(0, 0, 0, 0.1);
     }
-    
+
     .paper-fold::after {
         border-width: 0 48px 48px 0;
     }
@@ -110,7 +115,7 @@ h1, h2, h3, h4, h5, h6 {
         border-width: 0 60px 60px 0;
         box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.15), inset -1px 1px 2px rgba(0, 0, 0, 0.1);
     }
-    
+
     .paper-fold::after {
         border-width: 0 58px 58px 0;
     }
@@ -121,7 +126,7 @@ h1, h2, h3, h4, h5, h6 {
         border-width: 0 70px 70px 0;
         box-shadow: -3px 3px 5px rgba(0, 0, 0, 0.15), inset -1px 1px 2px rgba(0, 0, 0, 0.1);
     }
-    
+
     .paper-fold::after {
         border-width: 0 68px 68px 0;
     }
@@ -132,8 +137,91 @@ h1, h2, h3, h4, h5, h6 {
         border-width: 0 80px 80px 0;
         box-shadow: -3px 3px 5px rgba(0, 0, 0, 0.15), inset -1px 1px 2px rgba(0, 0, 0, 0.1);
     }
-    
+
     .paper-fold::after {
         border-width: 0 78px 78px 0;
     }
+}
+
+/* Blog post prose (markdown content) */
+.blog-prose h1 {
+    @apply mt-8 mb-4 text-2xl font-bold text-gray-900;
+}
+
+.blog-prose h2 {
+    @apply mt-8 mb-3 text-xl font-bold text-gray-900;
+}
+
+.blog-prose h3 {
+    @apply mt-6 mb-2 text-lg font-bold text-gray-900;
+}
+
+.blog-prose p {
+    @apply my-4 leading-7 text-gray-700;
+}
+
+.blog-prose a {
+    @apply text-esn-cyan underline hover:no-underline;
+}
+
+.blog-prose ul {
+    @apply my-4 list-disc pl-6 space-y-1 text-gray-700;
+}
+
+.blog-prose ol {
+    @apply my-4 list-decimal pl-6 space-y-1 text-gray-700;
+}
+
+.blog-prose blockquote {
+    @apply my-4 border-l-4 border-esn-cyan pl-4 italic text-gray-600;
+}
+
+.blog-prose code {
+    @apply rounded bg-gray-100 px-1.5 py-0.5 text-sm font-mono text-gray-800;
+}
+
+.blog-prose pre {
+    @apply my-4 overflow-x-auto rounded-lg bg-gray-900 p-4 text-sm text-gray-100;
+}
+
+.blog-prose pre code {
+    @apply bg-transparent p-0 text-inherit;
+}
+
+.blog-prose hr {
+    @apply my-8 border-gray-200;
+}
+
+.blog-prose img {
+    @apply my-4 max-w-full rounded-lg;
+}
+
+.blog-prose strong {
+    @apply font-bold text-gray-900;
+}
+
+.blog-prose :first-child {
+    @apply mt-0;
+}
+
+.blog-prose :last-child {
+    @apply mb-0;
+}
+
+/* Blog list: read/visited state for navigation clarity */
+.blog-item--read .blog-item__title {
+    @apply font-semibold text-gray-500;
+}
+.blog-item--read .blog-item__meta {
+    @apply text-gray-400;
+}
+.blog-item--read .blog-item__description {
+    @apply text-gray-400;
+}
+.blog-item--read {
+    @apply relative pl-5;
+}
+.blog-item--read::before {
+    content: "";
+    @apply absolute left-0 top-[0.4rem] w-1.5 h-1.5 rounded-full bg-esn-cyan;
 }
