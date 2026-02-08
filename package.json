@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "npm run fetch-posts && tsc -b && vite build",
+    "build": "npm run fetch-posts && node scripts/generate-sitemap.js && tsc -b && vite build",
     "fetch-posts": "node scripts/fetch-posts.js",
     "lint": "eslint .",
     "preview": "vite preview"
