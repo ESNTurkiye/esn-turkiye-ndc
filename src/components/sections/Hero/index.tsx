@@ -72,7 +72,7 @@ const Hero = () => {
                     International students face increasing visa barriers. Currently we
                     are identifying, analyzing and reporting these obstacles to influence
                     policy makers. <br />
-                    Project Timeline : 19.01.2026-19.02.2026 <br />
+                    Project Timeline : 19.01.2026-19.03.2026 <br />
                     <span className="font-bold text-white">
                         Your voice matters in this process.
                     </span>
