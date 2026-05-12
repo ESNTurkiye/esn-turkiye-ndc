@@ -39,7 +39,7 @@ const Hero = () => {
     return (
         <section
             id="top"
-            className="relative min-h-[90vh] flex items-center justify-center bg-esn-dark-blue pt-20 overflow-hidden"
+            className="relative min-h-[90vh] flex items-center justify-center bg-esn-dark-blue overflow-hidden -mt-[72px] pt-[calc(72px+5rem)] md:-mt-[104px] md:pt-[calc(104px+5rem)]"
         >
             <div className="absolute inset-0 w-full h-full z-0">
                 <img

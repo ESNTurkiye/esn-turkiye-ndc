@@ -7,7 +7,7 @@ const Footer = () => {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 md:gap-10 lg:gap-12">
                     <div className="space-y-3 sm:space-y-4 md:space-y-4 lg:space-y-5">
                         <img
-                            src="https://esnturkiye.github.io/esn-assets/images/logos/web-tr-colour-black.png"
+                            src="https://esnturkiye.github.io/esn-assets/common/brand/logos/web-tr-colour-black.png"
                             alt="ESN Türkiye - Erasmus Student Network Türkiye Logo"
                             className="h-14 sm:h-12 md:h-14 lg:h-16 w-auto object-contain"
                             width="auto"

@@ -4,8 +4,10 @@ import { fileURLToPath } from "url";
 import matter from "gray-matter";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const BLOG_LIST_URL = "https://api.github.com/repos/ESNTurkiye/esn-assets/contents/blog";
-const RAW_BASE = "https://raw.githubusercontent.com/ESNTurkiye/esn-assets/main/blog";
+const BLOG_LIST_URL =
+    "https://api.github.com/repos/ESNTurkiye/esn-assets/contents/apps/barriers-of-mobility/blog";
+const RAW_BASE =
+    "https://raw.githubusercontent.com/ESNTurkiye/esn-assets/main/apps/barriers-of-mobility/blog";
 const OUT_PATH = path.join(__dirname, "..", "src", "data", "posts.json");
 
 const isMarkdown = (name) => /\.(mdx?|md)$/i.test(name);

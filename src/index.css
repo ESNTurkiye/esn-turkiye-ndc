@@ -2,8 +2,8 @@
 
 @font-face {
     font-family: 'Kelson Sans';
-    src: url('https://esnturkiye.github.io/esn-assets/fonts/KelsonSans/KelsonSans-Normal.woff2') format('woff2'),
-        url('https://esnturkiye.github.io/esn-assets/fonts/KelsonSans/KelsonSans-Normal.woff') format('woff');
+    src: url('https://esnturkiye.github.io/esn-assets/common/fonts/KelsonSans/KelsonSans-Normal.woff2') format('woff2'),
+        url('https://esnturkiye.github.io/esn-assets/common/fonts/KelsonSans/KelsonSans-Normal.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -11,8 +11,8 @@
 
 @font-face {
     font-family: 'Kelson Sans';
-    src: url('https://esnturkiye.github.io/esn-assets/fonts/KelsonSans/KelsonSans-Bold.woff2') format('woff2'),
-        url('https://esnturkiye.github.io/esn-assets/fonts/KelsonSans/KelsonSans-Bold.woff') format('woff');
+    src: url('https://esnturkiye.github.io/esn-assets/common/fonts/KelsonSans/KelsonSans-Bold.woff2') format('woff2'),
+        url('https://esnturkiye.github.io/esn-assets/common/fonts/KelsonSans/KelsonSans-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -20,8 +20,8 @@
 
 @font-face {
     font-family: 'Kelson Sans';
-    src: url('https://esnturkiye.github.io/esn-assets/fonts/KelsonSans/KelsonSans-Light.woff2') format('woff2'),
-        url('https://esnturkiye.github.io/esn-assets/fonts/KelsonSans/KelsonSans-Light.woff') format('woff');
+    src: url('https://esnturkiye.github.io/esn-assets/common/fonts/KelsonSans/KelsonSans-Light.woff2') format('woff2'),
+        url('https://esnturkiye.github.io/esn-assets/common/fonts/KelsonSans/KelsonSans-Light.woff') format('woff');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
