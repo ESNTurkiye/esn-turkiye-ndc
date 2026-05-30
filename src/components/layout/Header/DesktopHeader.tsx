@@ -28,16 +28,14 @@ const DesktopHeader = ({
 
     return (
         <header
-            className={`hidden md:block fixed w-full bg-esn-dark-blue z-50 border-b border-esn-dark-blue/20 transition-all duration-300 ease-in-out ${
-                isScrolled
+            className={`hidden md:block fixed w-full bg-esn-dark-blue z-50 border-b border-esn-dark-blue/20 transition-all duration-300 ease-in-out ${isScrolled
                     ? "shadow-lg shadow-esn-dark-blue/30"
                     : "shadow-md shadow-esn-dark-blue/20"
-            }`}
+                }`}
         >
             <div
-                className={`container mx-auto px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 flex justify-between items-center transition-all duration-300 ease-in-out ${
-                    isScrolled ? "py-2" : "py-3"
-                }`}
+                className={`container mx-auto px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 flex justify-between items-center transition-all duration-300 ease-in-out ${isScrolled ? "py-2" : "py-3"
+                    }`}
             >
                 <a
                     href="/"
@@ -50,29 +48,25 @@ const DesktopHeader = ({
                     <img
                         src="https://esnturkiye.github.io/esn-assets/common/brand/logos/web-TR-colour-white.png"
                         alt="ESN Türkiye Official Logo - International Student Support"
-                        className={`h-14 w-auto object-contain transition-all duration-300 ease-in-out ${
-                            isScrolled ? "md:h-12 lg:h-[72px]" : "lg:h-20"
-                        }`}
+                        className={`h-14 w-auto object-contain transition-all duration-300 ease-in-out ${isScrolled ? "md:h-12 lg:h-[72px]" : "lg:h-20"
+                            }`}
                     />
                     <div className="hidden lg:flex flex-col border-l-2 border-white/30 pl-2 md:pl-3 leading-tight transition-all duration-300 ease-in-out">
                         <span
-                            className={`text-white font-display font-bold tracking-wide transition-all duration-300 ease-in-out ${
-                                isScrolled ? "text-sm md:text-base" : "text-base md:text-lg"
-                            }`}
+                            className={`text-white font-display font-bold tracking-wide transition-all duration-300 ease-in-out ${isScrolled ? "text-sm md:text-base" : "text-base md:text-lg"
+                                }`}
                         >
                             BARRIERS OF
                         </span>
                         <span
-                            className={`text-white font-display font-bold tracking-wide transition-all duration-300 ease-in-out ${
-                                isScrolled ? "text-sm md:text-base" : "text-base md:text-lg"
-                            }`}
+                            className={`text-white font-display font-bold tracking-wide transition-all duration-300 ease-in-out ${isScrolled ? "text-sm md:text-base" : "text-base md:text-lg"
+                                }`}
                         >
                             MOBILITY
                         </span>
                         <span
-                            className={`text-white/80 font-body text-xs font-normal tracking-normal mt-1 transition-all duration-300 ease-in-out ${
-                                isScrolled ? "text-[10px]" : "text-xs"
-                            }`}
+                            className={`text-white/80 font-body text-xs font-normal tracking-normal mt-1 transition-all duration-300 ease-in-out ${isScrolled ? "text-[10px]" : "text-xs"
+                                }`}
                         >
                             Research Project by ESN
                         </span>
@@ -81,9 +75,8 @@ const DesktopHeader = ({
 
                 <nav className="hidden md:block" aria-label="Main navigation">
                     <ul
-                        className={`flex items-center space-x-8 text-white font-body font-bold tracking-wider transition-all duration-300 ease-in-out ${
-                            isScrolled ? "text-xs md:text-xs lg:text-sm" : "text-xs md:text-sm"
-                        }`}
+                        className={`flex items-center space-x-8 text-white font-body font-bold tracking-wider transition-all duration-300 ease-in-out ${isScrolled ? "text-xs md:text-xs lg:text-sm" : "text-xs md:text-sm"
+                            }`}
                         role="list"
                     >
                         {mainItems.map((link) => (
@@ -137,11 +130,10 @@ const DesktopHeader = ({
                                             <button
                                                 type="button"
                                                 onClick={() => onNav(link)}
-                                                className={`w-full text-left px-4 py-2 hover:bg-gray-50 hover:text-esn-cyan cursor-pointer transition-colors ${
-                                                    index < aboutItems.length - 1
+                                                className={`w-full text-left px-4 py-2 hover:bg-gray-50 hover:text-esn-cyan cursor-pointer transition-colors ${index < aboutItems.length - 1
                                                         ? "border-b border-gray-100"
                                                         : ""
-                                                }`}
+                                                    }`}
                                                 aria-label={`Navigate to ${link.label}`}
                                             >
                                                 {link.label}
@@ -162,7 +154,7 @@ const DesktopHeader = ({
                                     onNav(surveyItem);
                                 }}
                                 className="bg-white text-esn-dark-blue px-6 py-2 rounded-full hover:bg-gray-100 transition shadow-md shadow-esn-dark-blue/15 hover:shadow-lg hover:shadow-esn-dark-blue/25 inline-block"
-                                aria-label="Take the Barriers of Mobility survey"
+                                aria-label="Read the 2026 Barriers of Mobility report"
                             >
                                 {surveyItem.label.toUpperCase()}
                             </a>
