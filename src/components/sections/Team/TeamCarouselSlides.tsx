@@ -27,7 +27,7 @@ function PreviousEditionSlide() {
 
 function PrWebSlide() {
     return (
-        <div className="px-2 sm:px-4 py-4 sm:py-6 space-y-8 sm:space-y-0 sm:flex sm:flex-row sm:gap-8 lg:gap-12">
+        <div className="select-text px-2 sm:px-4 py-4 sm:py-6 space-y-8 sm:space-y-0 sm:flex sm:flex-row sm:gap-8 lg:gap-12">
             <div className="flex-1">
                 <h3 className={SECTION_TITLE_CLASS}>PR Team</h3>
                 <div className="grid grid-cols-2 gap-4 sm:gap-6" role="list">

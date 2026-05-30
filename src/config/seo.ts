@@ -89,7 +89,7 @@ export const SEO = {
         "ESN Türkiye research",
         "European student mobility",
     ],
-    ogImage: "https://esnturkiye.github.io/esn-assets/images/og-image.png",
+    ogImage: "https://esnturkiye.github.io/esn-assets/apps/barriers-of-mobility/og-image.png",
     url: "https://barriersofmobility.esnturkey.org/",
     twitterHandle: "@esnturkiye",
     structuredData: {
