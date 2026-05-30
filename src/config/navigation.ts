@@ -1,3 +1,5 @@
+import { REPORT_URL } from "./urls";
+
 export type NavItemType = "home" | "route" | "section" | "external";
 
 export interface NavItemBase {
@@ -64,8 +66,8 @@ export const NAV_ABOUT: NavItem[] = [
 
 export const NAV_SURVEY: NavItem = {
     type: "external",
-    label: "Take the Survey",
-    url: "",
+    label: "Read 2026 Report",
+    url: REPORT_URL,
 };
 
 export function getMobileNavItems(surveyUrl: string): NavItem[] {

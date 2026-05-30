@@ -1,7 +1,7 @@
 import { useNavigate, useLocation } from "react-router-dom";
 import MobileHeader from "./MobileHeader.tsx";
 import DesktopHeader from "./DesktopHeader.tsx";
-import { SURVEY_URL } from "@/config";
+import { REPORT_URL } from "@/config";
 import type { NavItem } from "@/config/navigation";
 import {
     NAV_MAIN,
@@ -56,9 +56,9 @@ const Header = () => {
     const desktopSurveyItem: NavItem = {
         type: "external",
         label: NAV_SURVEY.label,
-        url: SURVEY_URL,
+        url: REPORT_URL,
     };
-    const mobileNavItems = getMobileNavItems(SURVEY_URL);
+    const mobileNavItems = getMobileNavItems(REPORT_URL);
 
     return (
         <>
