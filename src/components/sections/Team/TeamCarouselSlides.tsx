@@ -1,7 +1,9 @@
 import { CarouselItem } from "@/components/shared/ui/carousel";
-import type { TeamMember } from "@/data/team";
-import { previousEditionTeam, prTeam, webTeam } from "@/data/team";
+import type { TeamMember } from "@/content/schemas/team-member";
+import { loadTeam } from "@/content/load-team";
 import { TeamMemberBadge } from "./TeamMemberBadge";
+
+const { previousEditionTeam, prTeam, webTeam } = loadTeam();
 
 const SECTION_TITLE_CLASS =
     "text-center sm:text-left text-base sm:text-lg font-display font-bold text-gray-800 uppercase mb-4 sm:mb-6";

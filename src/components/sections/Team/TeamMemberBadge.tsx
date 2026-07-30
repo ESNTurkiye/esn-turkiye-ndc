@@ -1,4 +1,4 @@
-import type { TeamMember } from "@/data/team";
+import type { TeamMember } from "@/content/schemas/team-member";
 
 interface TeamMemberBadgeProps {
     member: TeamMember;
@@ -23,27 +23,14 @@ export const TeamMemberBadge = ({ member }: TeamMemberBadgeProps) => (
       `}
         >
             {member.image ? (
-                <img
-                    src={member.image}
-                    alt={`${member.name}, ${member.role}`}
-                    className="w-full h-full object-cover"
-                    loading="lazy"
-                    decoding="async"
-                />
+                <img src={member.image} alt={`${member.name}, ${member.role}`} className="w-full h-full object-cover" loading="lazy" decoding="async" />
             ) : (
-                <span
-                    className="text-xl sm:text-2xl font-bold text-esn-dark-blue"
-                    aria-hidden="true"
-                >
+                <span className="text-xl sm:text-2xl font-bold text-esn-dark-blue" aria-hidden="true">
                     {member.name[0]}
                 </span>
             )}
         </div>
-        <h3 className="text-base sm:text-lg font-display font-bold text-gray-900 px-2">
-            {member.name}
-        </h3>
-        <p className="text-esn-magenta text-xs font-bold uppercase tracking-wide mt-1">
-            {member.role}
-        </p>
+        <h3 className="text-base sm:text-lg font-display font-bold text-gray-900 px-2">{member.name}</h3>
+        <p className="text-esn-magenta text-xs font-bold uppercase tracking-wide mt-1">{member.role}</p>
     </article>
 );

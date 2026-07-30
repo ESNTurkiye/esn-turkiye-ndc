@@ -1,4 +1,6 @@
-import { testimonies } from "@/data/testimonies";
+import { loadTestimonies } from "@/content/load-testimonies";
+
+const testimonies = loadTestimonies();
 
 const Testimonies = () => {
     return (
