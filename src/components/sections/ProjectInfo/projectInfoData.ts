@@ -6,9 +6,9 @@ export const DOCUMENT_CONFIG = {
         buttonLabel: "View Policy Paper",
     },
     surveyReport: {
-        path: "/documents/survey-report-2024.pdf",
-        modalTitle: "Barriers of Mobility: Survey Report 2024",
-        analyticsId: "survey-report-2024.pdf",
+        path: "/documents/survey-report-2026.pdf",
+        modalTitle: "Barriers of Mobility: Survey Report 2026",
+        analyticsId: "survey-report-2026.pdf",
         buttonLabel: "View Survey Report",
     },
 } as const;
