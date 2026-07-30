@@ -5,15 +5,17 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "npm run fetch-posts && node scripts/generate-sitemap.js && tsc -b && vite build",
+    "build": "npm run fetch-posts && node scripts/generate-sitemap.js && node scripts/generate-feed.js && tsc -b && vite build && node scripts/prerender.mjs",
     "fetch-posts": "node scripts/fetch-posts.js",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
+    "@ionic/react": "^8.8.16",
     "@tailwindcss/vite": "^4.1.18",
     "embla-carousel-react": "^8.6.0",
     "gray-matter": "^4.0.3",
+    "ionicons": "^8.1.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-ga4": "^2.1.0",

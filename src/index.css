@@ -1,5 +1,35 @@
 @import "tailwindcss";
 
+/* Ionic varsayılanlarını Tailwind ile uyumlu hale getir */
+:root {
+    --ion-font-family: "Kelson Sans", "Lato", sans-serif;
+    --ion-color-primary: #2e3192;
+    --ion-color-secondary: #00aeef;
+    --ion-color-tertiary: #33b5e5;
+    --ion-color-success: #7ac143;
+    --ion-color-warning: #f47b20;
+    --ion-color-danger: #ff4444;
+}
+
+/* Ionic'in varsayılan stillerini Tailwind ile çakışmaması için sıfırla */
+html.ios ion-title,
+html.md ion-title {
+    font-family: var(--ion-font-family);
+}
+
+/* Ionic'in body üzerindeki position:fixed/overflow:hidden/etc. stillerini geçersiz kıl */
+body {
+    position: static !important;
+    overflow: visible !important;
+    height: auto !important;
+    max-height: none !important;
+    transform: none !important;
+}
+
+ion-app {
+    --ion-background-color: transparent;
+}
+
 @font-face {
     font-family: 'Kelson Sans';
     src: url('https://esnturkiye.github.io/esn-assets/common/fonts/KelsonSans/KelsonSans-Normal.woff2') format('woff2'),

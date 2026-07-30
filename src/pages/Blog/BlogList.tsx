@@ -4,6 +4,7 @@ import { useBlogSEO } from "@/config/seo";
 import { useAnalytics } from "@/hooks/useAnalytics";
 import { useReadPosts } from "@/hooks/useReadPosts";
 import { loadPosts } from "@/content/load-posts";
+import { generateBlogListJsonLd } from "@/content/schemas/generate-jsonld";
 
 const posts = loadPosts();
 
@@ -14,6 +15,22 @@ export default function BlogList() {
 
     useEffect(() => {
         trackBlogListView();
+
+        // Blog list JSON-LD structured data
+        const jsonLd = generateBlogListJsonLd();
+        const script = document.createElement("script");
+        script.type = "application/ld+json";
+        script.id = "bloglist-jsonld";
+        script.textContent = JSON.stringify(jsonLd);
+
+        const existing = document.getElementById("bloglist-jsonld");
+        if (existing) existing.remove();
+        document.head.appendChild(script);
+
+        return () => {
+            const existingScript = document.getElementById("bloglist-jsonld");
+            if (existingScript) existingScript.remove();
+        };
     }, [trackBlogListView]);
 
     return (

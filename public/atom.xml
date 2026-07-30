@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>https://barriersofmobility.esnturkey.org/blog</id>
+  <title>Barriers of Mobility Blog</title>
+  <subtitle>Stories, experiences and research findings on visa barriers faced by non-EU students in Erasmus+ and mobility programs.</subtitle>
+  <link href="https://barriersofmobility.esnturkey.org/blog" rel="alternate"/>
+  <link href="https://barriersofmobility.esnturkey.org/atom.xml" rel="self" type="application/atom+xml"/>
+  <icon>https://esnturkiye.github.io/esn-assets/apps/barriers-of-mobility/og-image.png</icon>
+  <updated>2026-02-08T00:00:00.000Z</updated>
+  <rights>CC BY-NC 4.0 — ESN Türkiye</rights>
+
+  <entry>
+    <title>The Lengthy and Uncertain Czech Visa Process from Türkiye</title>
+    <link href="https://barriersofmobility.esnturkey.org/blog/czech-visa-process-turkiye" rel="alternate"/>
+    <id>https://barriersofmobility.esnturkey.org/blog/czech-visa-process-turkiye</id>
+    <published>2026-02-08T00:00:00.000Z</published>
+    <updated>2026-02-08T00:00:00.000Z</updated>
+    <summary type="html">A Turkish student&apos;s experience of the long waiting times, expensive certified translations, and uncertainties when applying for a Czech visa for Erasmus.</summary>
+    <author>
+      <name>A.S.</name>
+    </author>
+  </entry>
+  <entry>
+    <title>Document Preparation and Distant Consulate Struggles</title>
+    <link href="https://barriersofmobility.esnturkey.org/blog/document-preparation-consulate-travel-visa" rel="alternate"/>
+    <id>https://barriersofmobility.esnturkey.org/blog/document-preparation-consulate-travel-visa</id>
+    <published>2026-02-08T00:00:00.000Z</published>
+    <updated>2026-02-08T00:00:00.000Z</updated>
+    <summary type="html">A Turkish student&apos;s experience of the biggest challenges during the visa process: rushed document preparation and having to travel far to the consulate with very limited time.</summary>
+    <author>
+      <name>N. S.</name>
+    </author>
+  </entry>
+  <entry>
+    <title>Double Visa Rejection: My Italian Student Visa Nightmare</title>
+    <link href="https://barriersofmobility.esnturkey.org/blog/double-italian-student-visa-rejection" rel="alternate"/>
+    <id>https://barriersofmobility.esnturkey.org/blog/double-italian-student-visa-rejection</id>
+    <published>2026-02-08T00:00:00.000Z</published>
+    <updated>2026-02-08T00:00:00.000Z</updated>
+    <summary type="html">A Turkish student&apos;s experience of being rejected twice for an Italian student visa despite full financial proof, scholarship acceptance, and complete documentation.</summary>
+    <author>
+      <name>Irem</name>
+    </author>
+  </entry>
+  <entry>
+    <title>From Visa Struggles to Personal Growth: My Erasmus Journey</title>
+    <link href="https://barriersofmobility.esnturkey.org/blog/erasmus-journey-visa-challenges-personal-growth" rel="alternate"/>
+    <id>https://barriersofmobility.esnturkey.org/blog/erasmus-journey-visa-challenges-personal-growth</id>
+    <published>2026-02-08T00:00:00.000Z</published>
+    <updated>2026-02-08T00:00:00.000Z</updated>
+    <summary type="html">A Turkish student&apos;s full Erasmus experience — from the stressful visa process, extra costs, and travel to another city, to personal development, cultural adaptation, and returning more confident.</summary>
+    <author>
+      <name>R. A.</name>
+    </author>
+  </entry>
+  <entry>
+    <title>My Visa Refusal Process</title>
+    <link href="https://barriersofmobility.esnturkey.org/blog/my-visa-refusal-erasmus-meeting" rel="alternate"/>
+    <id>https://barriersofmobility.esnturkey.org/blog/my-visa-refusal-erasmus-meeting</id>
+    <published>2026-02-08T00:00:00.000Z</published>
+    <updated>2026-02-08T00:00:00.000Z</updated>
+    <summary type="html">A Turkish university student&apos;s disappointing experience of having their visa refused for an Erasmus representative meeting in Ancona, Italy, despite complete documentation and official invitations.</summary>
+    <author>
+      <name>Anonymous</name>
+    </author>
+  </entry>
+  <entry>
+    <title>Overcoming Invisible Barriers: My Three Visa Experiences</title>
+    <link href="https://barriersofmobility.esnturkey.org/blog/overcoming-invisible-barriers-visa-experiences" rel="alternate"/>
+    <id>https://barriersofmobility.esnturkey.org/blog/overcoming-invisible-barriers-visa-experiences</id>
+    <published>2026-02-08T00:00:00.000Z</published>
+    <updated>2026-02-08T00:00:00.000Z</updated>
+    <summary type="html">A Turkish law student&apos;s honest reflections on three different visa applications — tourist, Erasmus, and cultural — and the psychological and practical challenges of the process.</summary>
+    <author>
+      <name>K.A.Ö</name>
+    </author>
+  </entry>
+  <entry>
+    <title>The Polish Visa Appointment Nightmare in Türkiye</title>
+    <link href="https://barriersofmobility.esnturkey.org/blog/polish-visa-appointment-struggle-turkiye" rel="alternate"/>
+    <id>https://barriersofmobility.esnturkey.org/blog/polish-visa-appointment-struggle-turkiye</id>
+    <published>2026-02-08T00:00:00.000Z</published>
+    <updated>2026-02-08T00:00:00.000Z</updated>
+    <summary type="html">A Turkish student&apos;s frustrating experience trying to secure a Polish visa appointment, dealing with bots, agencies, blocked websites, and extremely high fees.</summary>
+    <author>
+      <name>A.I.</name>
+    </author>
+  </entry>
+
+</feed>

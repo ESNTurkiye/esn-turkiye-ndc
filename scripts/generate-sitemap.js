@@ -4,7 +4,7 @@ import { fileURLToPath } from "url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const BASE_URL = "https://barriersofmobility.esnturkey.org";
-const POSTS_PATH = path.join(__dirname, "..", "src", "data", "posts.json");
+const POSTS_PATH = path.join(__dirname, "..", "content", "posts.json");
 const SITEMAP_PATH = path.join(__dirname, "..", "public", "sitemap.xml");
 
 const staticUrls = [
