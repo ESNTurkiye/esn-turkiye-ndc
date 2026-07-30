@@ -4,12 +4,14 @@ import {
     Carousel,
     CarouselContent,
 } from "@/components/shared/ui/carousel";
-import { currentTeam } from "@/data/team";
+import { loadTeam } from "@/content/load-team";
 import { TeamCarouselControls } from "./TeamCarouselControls";
 import { TeamCarouselSlides } from "./TeamCarouselSlides";
 import { TeamMemberBadge } from "./TeamMemberBadge";
 import { TeamSectionHeader } from "./TeamSectionHeader";
 import { useTeamCarousel } from "./useTeamCarousel";
+
+const { currentTeam } = loadTeam();
 
 export default function Team() {
     const [api, setApi] = useState<CarouselApi | undefined>(undefined);
