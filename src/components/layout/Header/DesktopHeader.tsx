@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
 import type { NavItem } from "@/config/navigation";
+import { useScrollThreshold } from "@/hooks/useScrollThreshold";
 
 interface DesktopHeaderProps {
     mainItems: NavItem[];
@@ -16,15 +16,7 @@ const DesktopHeader = ({
     onNav,
     getNavItemKey,
 }: DesktopHeaderProps) => {
-    const [isScrolled, setIsScrolled] = useState(false);
-
-    useEffect(() => {
-        const handleScroll = () => {
-            setIsScrolled(window.scrollY > 100);
-        };
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
+    const isScrolled = useScrollThreshold(100);
 
     return (
         <header
