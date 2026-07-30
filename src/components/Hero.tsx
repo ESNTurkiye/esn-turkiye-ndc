@@ -1,4 +1,4 @@
-import { SURVEY_URL } from "@/config";
+import { REPORT_URL } from "@/config";
 import { useAnalytics } from "@/hooks/useAnalytics";
 
 const Hero = () => {
@@ -27,7 +27,7 @@ const Hero = () => {
         <section id="top" className="relative min-h-[90vh] flex items-center justify-center bg-esn-dark-blue pt-20 overflow-hidden">
             <div className="absolute inset-0 w-full h-full z-0">
                 <img
-                    src="https://activities.esn.org/sites/default/files/styles/max_2600x2600/public/img_causes/banner_culture.png.webp?itok=AiFLiAv4"
+                    src="https://esnturkiye.github.io/esn-assets/apps/barriers-of-mobility/banner_culture.png.webp"
                     alt="ESN Culture Banner"
                     className="w-full h-full object-cover object-center"
                     style={{ filter: 'brightness(0.5) saturate(0.9)' }}
@@ -62,7 +62,7 @@ const Hero = () => {
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center font-display">
                     <a
-                        href={SURVEY_URL}
+                        href={REPORT_URL}
                         target="_blank"
                         rel="noopener noreferrer"
                         onClick={handleTakeSurveyClick}
@@ -70,7 +70,7 @@ const Hero = () => {
                         aria-label="Share your visa experience story"
                     >
                         <span className="absolute inset-0 bg-white origin-center scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out"></span>
-                        <span className="relative z-10 text-white group-hover:text-esn-dark-blue transition-colors duration-300">Take the Survey</span>
+                        <span className="relative z-10 text-white group-hover:text-esn-dark-blue transition-colors duration-300">Read 2026 Report</span>
                     </a>
                     <button
                         onClick={handleReadReportClick}

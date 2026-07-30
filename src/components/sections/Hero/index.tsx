@@ -1,4 +1,4 @@
-import { SURVEY_URL } from "@/config";
+import { REPORT_URL } from "@/config";
 import { useAnalytics } from "@/hooks/useAnalytics";
 
 const Hero = () => {
@@ -69,9 +69,7 @@ const Hero = () => {
                 </h1>
 
                 <p className="text-base sm:text-lg md:text-xl text-gray-100 mb-10 max-w-3xl mx-auto font-body font-light">
-                    International students face increasing visa barriers. Currently we
-                    are identifying, analyzing and reporting these obstacles to influence
-                    policy makers. <br />
+                    Thank you for taking part in our survey and helping us analyse the visa barriers faced by international students. The project findings and final results are now available below. <br />
                     Project Timeline : 19.01.2026-19.03.2026 <br />
                     <span className="font-bold text-white">
                         Your voice matters in this process.
@@ -80,7 +78,7 @@ const Hero = () => {
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center font-display">
                     <a
-                        href={SURVEY_URL}
+                        href={REPORT_URL}
                         target="_blank"
                         rel="noopener noreferrer"
                         onClick={handleTakeSurveyClick}
@@ -89,7 +87,7 @@ const Hero = () => {
                     >
                         <span className="absolute inset-0 bg-white origin-center scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out" />
                         <span className="relative z-10 text-white group-hover:text-esn-dark-blue transition-colors duration-300">
-                            Take the Survey
+                            Read 2026 Report
                         </span>
                     </a>
                     <button

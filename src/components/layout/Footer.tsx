@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 
 const Footer = () => {
     return (
@@ -46,9 +46,9 @@ const Footer = () => {
                             </p>
                             <Link
                                 to="/blog"
-                                className="mt-3 inline-block text-esn-dark-blue hover:underline text-xs sm:text-xs md:text-sm"
+                                className="mt-3 inline-flex items-center gap-2 bg-esn-dark-blue text-white font-bold px-4 py-2.5 text-sm rounded-lg hover:bg-esn-dark-blue/90 hover:shadow-md transition-all"
                             >
-                                Blog
+                                Read Our Blog
                             </Link>
                         </div>
                     </div>
