@@ -1,4 +1,4 @@
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router";
 import MobileHeader from "./MobileHeader.tsx";
 import DesktopHeader from "./DesktopHeader.tsx";
 import { SURVEY_URL } from "@/config";

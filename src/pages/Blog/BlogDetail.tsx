@@ -1,13 +1,12 @@
 import { useEffect, useCallback, useState } from "react";
-import { useParams, Link, useLocation } from "react-router-dom";
+import { useParams, Link, useLocation } from "react-router";
 import ReactMarkdown from "react-markdown";
-import type { BlogPost } from "@/types/blog";
 import { useBlogPostSEO } from "@/config/seo";
 import { useAnalytics } from "@/hooks/useAnalytics";
 import { useReadPosts } from "@/hooks/useReadPosts";
-import postsData from "@/data/posts.json";
+import { loadPosts } from "@/content/load-posts";
 
-const posts = postsData as BlogPost[];
+const posts = loadPosts();
 
 const shareUrl = (url: string) =>
     typeof window !== "undefined" ? encodeURIComponent(url) : "";
@@ -106,14 +105,12 @@ export default function BlogDetail() {
     useBlogPostSEO(post ?? null);
 
     useEffect(() => {
-        if (slug) markAsRead(slug);
-    }, [slug, markAsRead]);
-
-    useEffect(() => {
-        if (slug && post) {
+        if (!slug) return;
+        markAsRead(slug);
+        if (post) {
             trackBlogPostView(slug, post.metadata.title);
         }
-    }, [slug, post, trackBlogPostView]);
+    }, [slug, post, markAsRead, trackBlogPostView]);
 
     if (!slug || !post) {
         return (

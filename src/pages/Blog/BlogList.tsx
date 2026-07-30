@@ -1,12 +1,11 @@
 import { useEffect } from "react";
-import { Link } from "react-router-dom";
-import type { BlogPost } from "@/types/blog";
+import { Link } from "react-router";
 import { useBlogSEO } from "@/config/seo";
 import { useAnalytics } from "@/hooks/useAnalytics";
 import { useReadPosts } from "@/hooks/useReadPosts";
-import postsData from "@/data/posts.json";
+import { loadPosts } from "@/content/load-posts";
 
-const posts = postsData as BlogPost[];
+const posts = loadPosts();
 
 export default function BlogList() {
     useBlogSEO({ title: "Blog", description: "Barriers of Mobility blog and updates - ESN Türkiye" });
