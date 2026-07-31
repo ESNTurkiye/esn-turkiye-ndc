@@ -4,8 +4,8 @@ import { useAnalytics } from "@/hooks/useAnalytics";
 const Hero = () => {
     const { trackButtonClick } = useAnalytics();
 
-    const handleTakeSurveyClick = () => {
-        trackButtonClick("take_survey", "hero");
+    const handleDiscoverResultsClick = () => {
+        trackButtonClick("discover_results", "hero");
     };
 
     const handleReadReportClick = () => {
@@ -81,13 +81,13 @@ const Hero = () => {
                         href={REPORT_URL}
                         target="_blank"
                         rel="noopener noreferrer"
-                        onClick={handleTakeSurveyClick}
+                        onClick={handleDiscoverResultsClick}
                         className="relative px-8 py-4 rounded-lg font-bold tracking-wide shadow-lg shadow-esn-light-blue/25 hover:shadow-xl hover:shadow-esn-light-blue/30 transition-shadow duration-300 uppercase overflow-hidden group bg-esn-light-blue inline-block text-center"
-                        aria-label="Share your visa experience story"
+                        aria-label="Discover the survey results"
                     >
                         <span className="absolute inset-0 bg-white origin-center scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out" />
                         <span className="relative z-10 text-white group-hover:text-esn-dark-blue transition-colors duration-300">
-                            Read 2026 Report
+                            Discover the Results
                         </span>
                     </a>
                     <button

@@ -1,3 +1,16 @@
+import { REPORT_URL } from "@/config";
+
+export const PROJECT_INTRODUCTION = {
+    badge: "Project Overview",
+    title:
+        "What is the Barrier of Mobility Visa Issues for Non EU-2026 Edition Survey?",
+    description:
+        "The Barriers of Mobility Survey gathers the experiences of non-EU students participating in international mobility programmes to understand how visa and residence permit procedures affect their journey. The findings reveal key challenges, highlight structural barriers, and provide evidence to support more accessible, fair, and inclusive mobility opportunities for everyone.",
+    whyItMattersTitle: "Why It Matters",
+    whyItMattersDescription:
+        "Every response contributes to a bigger picture. By turning students' experiences into evidence, the survey supports advocacy, informs decision-makers, and drives improvements that make international mobility more accessible and inclusive.",
+} as const;
+
 export const DOCUMENT_CONFIG = {
     policyPaper: {
         path: "/documents/policy-paper-2025.pdf",
@@ -6,10 +19,11 @@ export const DOCUMENT_CONFIG = {
         buttonLabel: "View Policy Paper",
     },
     surveyReport: {
-        path: "/documents/survey-report-2026.pdf",
+        path: REPORT_URL,
         modalTitle: "Barriers of Mobility: Survey Report 2026",
-        analyticsId: "survey-report-2026.pdf",
+        analyticsId: "survey-report-2026",
         buttonLabel: "View Survey Report",
+        isExternal: true,
     },
 } as const;
 

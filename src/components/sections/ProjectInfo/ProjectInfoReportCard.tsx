@@ -8,8 +8,6 @@ interface ProjectInfoReportCardProps {
     onSurveyClick: () => void;
     isPolicyModalOpen: boolean;
     onPolicyModalClose: () => void;
-    isSurveyModalOpen: boolean;
-    onSurveyModalClose: () => void;
 }
 
 export function ProjectInfoReportCard({
@@ -17,8 +15,6 @@ export function ProjectInfoReportCard({
     onSurveyClick,
     isPolicyModalOpen,
     onPolicyModalClose,
-    isSurveyModalOpen,
-    onSurveyModalClose,
 }: ProjectInfoReportCardProps) {
     return (
         <div id="report-2025">
@@ -53,12 +49,6 @@ export function ProjectInfoReportCard({
                         onClose={onPolicyModalClose}
                         title={DOCUMENT_CONFIG.policyPaper.modalTitle}
                         pdfPath={DOCUMENT_CONFIG.policyPaper.path}
-                    />
-                    <PDFModal
-                        isOpen={isSurveyModalOpen}
-                        onClose={onSurveyModalClose}
-                        title={DOCUMENT_CONFIG.surveyReport.modalTitle}
-                        pdfPath={DOCUMENT_CONFIG.surveyReport.path}
                     />
                 </div>
             </div>
