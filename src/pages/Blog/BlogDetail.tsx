@@ -5,6 +5,7 @@ import { useBlogPostSEO } from "@/config/seo";
 import { useAnalytics } from "@/hooks/useAnalytics";
 import { useReadPosts } from "@/hooks/useReadPosts";
 import { loadPosts } from "@/content/load-posts";
+import styles from "./Blog.module.css";
 
 const posts = loadPosts();
 
@@ -173,7 +174,7 @@ export default function BlogDetail() {
                         </h1>
                     </header>
 
-                    <div className="blog-prose prose prose-gray max-w-none text-left">
+                    <div className={`${styles.blogProse} max-w-none text-left`}>
                         <ReactMarkdown>{post.content}</ReactMarkdown>
                     </div>
                 </div>

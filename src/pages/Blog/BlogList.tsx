@@ -4,6 +4,7 @@ import { useBlogSEO } from "@/config/seo";
 import { useAnalytics } from "@/hooks/useAnalytics";
 import { useReadPosts } from "@/hooks/useReadPosts";
 import { loadPosts } from "@/content/load-posts";
+import styles from "./Blog.module.css";
 
 const posts = loadPosts();
 
@@ -36,22 +37,22 @@ export default function BlogList() {
                     {posts.map((post) => (
                         <li
                             key={post.slug}
-                            className={`border-b border-gray-200 pb-10 last:border-0 last:pb-0 blog-item ${isRead(post.slug) ? "blog-item--read" : ""}`}
+                            className={`border-b border-gray-200 pb-10 last:border-0 last:pb-0 ${isRead(post.slug) ? styles.blogItemRead : ""}`}
                         >
                             <Link to={`/blog/${post.slug}`} className="group block">
                                 {post.metadata.date && (
                                     <time
                                         dateTime={post.metadata.date}
-                                        className="blog-item__meta text-sm font-medium text-esn-cyan"
+                                        className={`${isRead(post.slug) ? styles.blogItemMeta : ""} text-sm font-medium text-esn-cyan`}
                                     >
                                         {formatDate(post.metadata.date)}
                                     </time>
                                 )}
-                                <h2 className="blog-item__title mt-1 text-xl font-bold text-gray-900 group-hover:text-esn-cyan">
+                                <h2 className={`${isRead(post.slug) ? styles.blogItemTitle : ""} mt-1 text-xl font-bold text-gray-900 group-hover:text-esn-cyan`}>
                                     {post.metadata.title ?? post.slug}
                                 </h2>
                                 {post.metadata.description && (
-                                    <p className="blog-item__description mt-2 text-gray-600">
+                                    <p className={`${isRead(post.slug) ? styles.blogItemDescription : ""} mt-2 text-gray-600`}>
                                         {post.metadata.description}
                                     </p>
                                 )}
