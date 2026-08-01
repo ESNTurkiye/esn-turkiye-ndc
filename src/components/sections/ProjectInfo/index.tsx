@@ -6,8 +6,6 @@ export default function ProjectInfo() {
     const {
         isPolicyModalOpen,
         setIsPolicyModalOpen,
-        isSurveyModalOpen,
-        setIsSurveyModalOpen,
         handlePolicyClick,
         handleSurveyClick,
     } = useProjectInfoDocuments();
@@ -22,8 +20,6 @@ export default function ProjectInfo() {
                         onSurveyClick={handleSurveyClick}
                         isPolicyModalOpen={isPolicyModalOpen}
                         onPolicyModalClose={() => setIsPolicyModalOpen(false)}
-                        isSurveyModalOpen={isSurveyModalOpen}
-                        onSurveyModalClose={() => setIsSurveyModalOpen(false)}
                     />
                 </div>
             </div>

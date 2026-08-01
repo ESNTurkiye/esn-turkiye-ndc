@@ -66,7 +66,7 @@ export const NAV_ABOUT: NavItem[] = [
 
 export const NAV_SURVEY: NavItem = {
     type: "external",
-    label: "Read 2026 Report",
+    label: "Discover the Results",
     url: REPORT_URL,
 };
 

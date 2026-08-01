@@ -7,7 +7,6 @@ import { DOCUMENT_CONFIG } from "./projectInfoData";
 export function useProjectInfoDocuments() {
     const { trackDocumentAction, trackButtonClick } = useAnalytics();
     const [isPolicyModalOpen, setIsPolicyModalOpen] = useState(false);
-    const [isSurveyModalOpen, setIsSurveyModalOpen] = useState(false);
 
     const handlePolicyClick = useCallback(() => {
         trackDocumentAction("view", DOCUMENT_CONFIG.policyPaper.analyticsId);
@@ -24,18 +23,12 @@ export function useProjectInfoDocuments() {
         trackDocumentAction("view", DOCUMENT_CONFIG.surveyReport.analyticsId);
         trackButtonClick("view_survey_report", "project_info_section");
 
-        if (isMobileDevice()) {
-            openPDF(DOCUMENT_CONFIG.surveyReport.path);
-        } else {
-            setIsSurveyModalOpen(true);
-        }
+        window.open(DOCUMENT_CONFIG.surveyReport.path, "_blank", "noopener,noreferrer");
     }, [trackDocumentAction, trackButtonClick]);
 
     return {
         isPolicyModalOpen,
         setIsPolicyModalOpen,
-        isSurveyModalOpen,
-        setIsSurveyModalOpen,
         handlePolicyClick,
         handleSurveyClick,
     };
