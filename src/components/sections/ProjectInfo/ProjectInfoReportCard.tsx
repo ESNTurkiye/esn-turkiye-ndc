@@ -4,15 +4,17 @@ import { DocumentActionButtons } from "./DocumentActionButtons";
 import { KeyAchievementsList } from "./KeyAchievementsList";
 
 interface ProjectInfoReportCardProps {
-    onPolicyClick: () => void;
+    onReport2024Click: () => void;
     onSurveyClick: () => void;
+    onPolicyClick: () => void;
     isPolicyModalOpen: boolean;
     onPolicyModalClose: () => void;
 }
 
 export function ProjectInfoReportCard({
-    onPolicyClick,
+    onReport2024Click,
     onSurveyClick,
+    onPolicyClick,
     isPolicyModalOpen,
     onPolicyModalClose,
 }: ProjectInfoReportCardProps) {
@@ -40,8 +42,9 @@ export function ProjectInfoReportCard({
                     </div>
 
                     <DocumentActionButtons
-                        onPolicyClick={onPolicyClick}
+                        onReport2024Click={onReport2024Click}
                         onSurveyClick={onSurveyClick}
+                        onPolicyClick={onPolicyClick}
                     />
 
                     <PDFModal

@@ -19,6 +19,13 @@ export function useProjectInfoDocuments() {
         }
     }, [trackDocumentAction, trackButtonClick]);
 
+    const handleReport2024Click = useCallback(() => {
+        trackDocumentAction("view", DOCUMENT_CONFIG.report2024.analyticsId);
+        trackButtonClick("view_report_2024", "project_info_section");
+
+        window.open(DOCUMENT_CONFIG.report2024.path, "_blank", "noopener,noreferrer");
+    }, [trackDocumentAction, trackButtonClick]);
+
     const handleSurveyClick = useCallback(() => {
         trackDocumentAction("view", DOCUMENT_CONFIG.surveyReport.analyticsId);
         trackButtonClick("view_survey_report", "project_info_section");
@@ -30,6 +37,7 @@ export function useProjectInfoDocuments() {
         isPolicyModalOpen,
         setIsPolicyModalOpen,
         handlePolicyClick,
+        handleReport2024Click,
         handleSurveyClick,
     };
 }

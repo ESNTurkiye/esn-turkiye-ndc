@@ -1,29 +1,11 @@
-import { REPORT_URL } from "@/config";
 import { useAnalytics } from "@/hooks/useAnalytics";
 
 const Hero = () => {
     const { trackButtonClick } = useAnalytics();
 
-    const handleDiscoverResultsClick = () => {
-        trackButtonClick("discover_results", "hero");
-    };
-
-    const handleReadReportClick = () => {
-        trackButtonClick("read_report_scroll", "hero");
-
-        const element =
-            document.getElementById("report-2025") ||
-            document.querySelector<HTMLElement>("section:nth-of-type(2)");
-        if (element) {
-            const headerOffset = 100;
-            const elementPosition = element.getBoundingClientRect().top;
-            const offsetPosition =
-                elementPosition + window.pageYOffset - headerOffset;
-            window.scrollTo({ top: offsetPosition, behavior: "smooth" });
-        }
-    };
-
     const scrollToReport = () => {
+        trackButtonClick("discover_results", "hero");
+
         const element =
             document.getElementById("report-2025") ||
             document.querySelector("section:nth-of-type(2)");
@@ -70,34 +52,20 @@ const Hero = () => {
 
                 <p className="text-base sm:text-lg md:text-xl text-gray-100 mb-10 max-w-3xl mx-auto font-body font-light">
                     Thank you for taking part in our survey and helping us analyse the visa barriers faced by international students. The project findings and final results are now available below. <br />
-                    Project Timeline : 19.01.2026-19.03.2026 <br />
                     <span className="font-bold text-white">
                         Your voice matters in this process.
                     </span>
                 </p>
 
-                <div className="flex flex-col sm:flex-row gap-4 justify-center font-display">
-                    <a
-                        href={REPORT_URL}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        onClick={handleDiscoverResultsClick}
+                <div className="flex justify-center font-display">
+                    <button
+                        onClick={scrollToReport}
                         className="relative px-8 py-4 rounded-lg font-bold tracking-wide shadow-lg shadow-esn-light-blue/25 hover:shadow-xl hover:shadow-esn-light-blue/30 transition-shadow duration-300 uppercase overflow-hidden group bg-esn-light-blue inline-block text-center"
                         aria-label="Discover the survey results"
                     >
                         <span className="absolute inset-0 bg-white origin-center scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out" />
                         <span className="relative z-10 text-white group-hover:text-esn-dark-blue transition-colors duration-300">
                             Discover the Results
-                        </span>
-                    </a>
-                    <button
-                        onClick={handleReadReportClick}
-                        className="relative px-8 py-4 bg-transparent text-white border-2 border-white rounded-lg font-bold tracking-wide shadow-md shadow-white/10 hover:shadow-lg hover:shadow-white/20 transition-shadow duration-300 uppercase overflow-hidden group"
-                        aria-label="Read the 2025 Barriers of Mobility report"
-                    >
-                        <span className="absolute inset-0 bg-white origin-center scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out" />
-                        <span className="relative z-10 group-hover:text-esn-dark-blue transition-colors duration-300">
-                            Read 2024 Report
                         </span>
                     </button>
                 </div>

@@ -7,6 +7,7 @@ export default function ProjectInfo() {
         isPolicyModalOpen,
         setIsPolicyModalOpen,
         handlePolicyClick,
+        handleReport2024Click,
         handleSurveyClick,
     } = useProjectInfoDocuments();
 
@@ -16,8 +17,9 @@ export default function ProjectInfo() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-start">
                     <ProjectInfoIntroduction />
                     <ProjectInfoReportCard
-                        onPolicyClick={handlePolicyClick}
+                        onReport2024Click={handleReport2024Click}
                         onSurveyClick={handleSurveyClick}
+                        onPolicyClick={handlePolicyClick}
                         isPolicyModalOpen={isPolicyModalOpen}
                         onPolicyModalClose={() => setIsPolicyModalOpen(false)}
                     />
