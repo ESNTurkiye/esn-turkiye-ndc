@@ -32,9 +32,14 @@ export function ProjectInfoReportCard({
 
                     <div className="space-y-4 mb-6 sm:mb-8">
                         <p className="text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed">
-                            The previous edition of Barriers of Mobility achieved significant
-                            milestones in understanding visa challenges faced by the Erasmus
-                            Generation.
+                            The Barriers of Mobility: Visa Issues for Non-EU Students Survey
+                            provides evidence-based insights into the visa experiences of
+                            non-EU students participating in international mobility
+                            programmes. By examining visa and residence permit procedures,
+                            the survey identifies the key challenges affecting mobility,
+                            highlights structural barriers, and supports evidence-based
+                            recommendations for more accessible, fair, and inclusive
+                            international mobility.
                         </p>
                         <KeyAchievementsList />
                     </div>
