@@ -43,7 +43,7 @@ const Hero = () => {
         >
             <div className="absolute inset-0 w-full h-full z-0">
                 <img
-                    src="https://activities.esn.org/sites/default/files/styles/max_2600x2600/public/img_causes/banner_culture.png.webp?itok=AiFLiAv4"
+                    src="https://esnturkiye.github.io/esn-assets/apps/barriers-of-mobility/banner_culture.png.webp"
                     alt="ESN Culture Banner"
                     className="w-full h-full object-cover object-center"
                     style={{ filter: "brightness(0.5) saturate(0.9)" }}
