@@ -12,6 +12,13 @@ export const PROJECT_INTRODUCTION = {
 } as const;
 
 export const DOCUMENT_CONFIG = {
+    report2024: {
+        path: "/documents/survey-report-2024.pdf",
+        modalTitle: "Barriers of Mobility: Survey Report 2024",
+        analyticsId: "survey-report-2024.pdf",
+        buttonLabel: "Read 2024 Report",
+        isExternal: true,
+    },
     policyPaper: {
         path: "/documents/policy-paper-2025.pdf",
         modalTitle: "Barriers of Mobility: Policy Paper 2025",
@@ -22,7 +29,7 @@ export const DOCUMENT_CONFIG = {
         path: REPORT_URL,
         modalTitle: "Barriers of Mobility: Survey Report 2026",
         analyticsId: "survey-report-2026",
-        buttonLabel: "View Survey Report",
+        buttonLabel: "Read 2026 Report",
         isExternal: true,
     },
 } as const;

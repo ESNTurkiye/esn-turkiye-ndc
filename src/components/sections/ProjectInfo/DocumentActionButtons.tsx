@@ -20,16 +20,34 @@ function DocumentIcon({ className }: { className?: string }) {
 }
 
 interface DocumentActionButtonsProps {
-    onPolicyClick: () => void;
+    onReport2024Click: () => void;
     onSurveyClick: () => void;
+    onPolicyClick: () => void;
 }
 
 export function DocumentActionButtons({
-    onPolicyClick,
+    onReport2024Click,
     onSurveyClick,
+    onPolicyClick,
 }: DocumentActionButtonsProps) {
     return (
         <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
+            <button
+                onClick={onReport2024Click}
+                className="px-6 sm:px-8 py-3.5 sm:py-3 bg-white text-esn-dark-blue font-bold font-display rounded-lg hover:bg-gray-50 active:bg-gray-100 transition shadow-sm shadow-esn-dark-blue/10 hover:shadow-md hover:shadow-esn-dark-blue/20 uppercase flex items-center justify-center gap-2 text-sm sm:text-base border-2 border-esn-dark-blue touch-manipulation"
+                aria-label={`Read the ${DOCUMENT_CONFIG.report2024.modalTitle}`}
+            >
+                <DocumentIcon className="w-4 h-4 sm:w-5 sm:h-5 shrink-0" />
+                <span>{DOCUMENT_CONFIG.report2024.buttonLabel}</span>
+            </button>
+            <button
+                onClick={onSurveyClick}
+                className="px-6 sm:px-8 py-3.5 sm:py-3 bg-white text-esn-dark-blue font-bold font-display rounded-lg hover:bg-gray-50 active:bg-gray-100 transition shadow-sm shadow-esn-dark-blue/10 hover:shadow-md hover:shadow-esn-dark-blue/20 uppercase flex items-center justify-center gap-2 text-sm sm:text-base border-2 border-esn-dark-blue touch-manipulation"
+                aria-label={`Read the ${DOCUMENT_CONFIG.surveyReport.modalTitle}`}
+            >
+                <span>{DOCUMENT_CONFIG.surveyReport.buttonLabel}</span>
+                <DocumentIcon className="w-4 h-4 sm:w-5 sm:h-5 shrink-0" />
+            </button>
             <button
                 onClick={onPolicyClick}
                 className="px-6 sm:px-8 py-3.5 sm:py-3 bg-esn-dark-blue text-white font-bold font-display rounded-lg hover:bg-blue-900 active:bg-blue-950 transition shadow-md shadow-esn-dark-blue/25 hover:shadow-lg hover:shadow-esn-dark-blue/35 uppercase flex items-center justify-center gap-2 text-sm sm:text-base touch-manipulation"
@@ -37,14 +55,6 @@ export function DocumentActionButtons({
             >
                 <DocumentIcon className="w-4 h-4 sm:w-5 sm:h-5 shrink-0" />
                 <span>{DOCUMENT_CONFIG.policyPaper.buttonLabel}</span>
-            </button>
-            <button
-                onClick={onSurveyClick}
-                className="px-6 sm:px-8 py-3.5 sm:py-3 bg-white text-esn-dark-blue font-bold font-display rounded-lg hover:bg-gray-50 active:bg-gray-100 transition shadow-sm shadow-esn-dark-blue/10 hover:shadow-md hover:shadow-esn-dark-blue/20 uppercase flex items-center justify-center gap-2 text-sm sm:text-base border-2 border-esn-dark-blue touch-manipulation"
-                aria-label={`View the ${DOCUMENT_CONFIG.surveyReport.modalTitle}`}
-            >
-                <span>{DOCUMENT_CONFIG.surveyReport.buttonLabel}</span>
-                <DocumentIcon className="w-4 h-4 sm:w-5 sm:h-5 shrink-0" />
             </button>
         </div>
     );
